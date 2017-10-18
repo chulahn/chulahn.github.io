@@ -29,7 +29,7 @@
                 //Get previous transactions if available.
                 var transactionLog = JSON.parse(localStorage.getItem("transactionLog"));
                 
-                if (transactionLog && transactionLog.habits.length > 0) {
+                if (transactionLog && transactionLog.length > 0) {
                     console.log("Using previous transactionLog")
                     console.log(transactionLog)
                     $scope.transactions = transactionLog;
