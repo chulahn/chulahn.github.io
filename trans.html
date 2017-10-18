@@ -24,7 +24,7 @@
         </thead>
         <tbody>
             <!-- ng-repeat -->
-            <tr ng-repeat="x in transactions">
+            <tr ng-repeat="x in transactions track by $index">
                 <th scope="row">{{displayDate(x.date)}}</th>
                 <td>{{x.name}}</td>
                 <td>{{x.price}}</td>
