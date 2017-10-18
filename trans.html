@@ -34,20 +34,28 @@
         </tbody>
     </table>
 
+    <section>
+        <textarea id="test">
+            
+        </textarea>
+    </section>
+
     <section id="addTransactionContainer">
         <div class="row">
-            <div class="col-xs-1">
-                -
+            
+            <div class="col-xs-4 form-group">
+                <input id="name" class="form-control" ng-model="name" placeholder="Item Name">
+            </div>
+            <div class="col-xs-4">
+                <input id="price" class="form-control" ng-model="price" placeholder="Item Price">
             </div>
             <div class="col-xs-2">
-                <input id="name" ng-model="name" placeholder="Item Name">
-            </div>
-            <div class="col-xs-2">
-                <input id="price" ng-model="price" placeholder="Item Price">
-            </div>
-            <div class="col-xs-1">
                 <button class="btn btn-success" ng-click="addItem()">Add+</button>
             </div>
+            <div class="col-xs-2">
+                <button class="btn btn-success" ng-click="exportLog()">Export</button>
+            </div>
+            
         </div>
     </section>
 </body>

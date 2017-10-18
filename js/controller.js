@@ -63,6 +63,16 @@
                     // console.log($scope.transactions);
                 }
 
+                $scope.exportLog = function() {
+                    console.log("Export log");
+                    localStorage.setItem("transactionLog", JSON.stringify($scope.transactions));
+                    var log = localStorage.getItem("transactionLog");
+                    console.log(JSON.stringify(log));   
+                    
+                    $("#test").val(JSON.stringify(log));
+                }
+
+
                 $scope.pomodoros = [
                     {name: "Pray", count: 1},
                     {name: "Work", count: 2}
