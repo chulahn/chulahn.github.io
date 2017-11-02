@@ -1,8 +1,32 @@
 (function(angular) {
     
         angular.module('app',[])
+
+            .filter("tag", function(tag){
+
+                return function(input, tg) {
+                    input = input || '';
+                    if (input.tag.indexOf("hype") !== -1) {
+                        console.log(input);
+                        console.log(this);
+                        
+                    }
+                }
+            })
     
-            .controller("dataController", function ($scope) {
+            .controller("dataController", [ '$scope' , function ($scope) {
+
+                //mLab API Key - Un-mm4UdPQsFEX65W4eplZvLGtEBjJws
+
+                //Show all databases for this API Key
+                ///https://api.mlab.com/api/1/databases?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws
+
+                //Show all collections for database
+                //https://api.mlab.com/api/1/databases/eyecoin/collections?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws
+
+                //Show all transactions(items) in a collection
+                //https://api.mlab.com/api/1/databases/eyecoin/collections/transactions?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws
+
 
                 $scope.transactions = [
                     //Initialize with Some Dummy Data.
@@ -35,6 +59,9 @@
                     $scope.transactions = transactionLog;
                 }
 
+               
+
+
                 $scope.displayDate = function(date) {
                     var date = new Date(date);
 
@@ -46,229 +73,193 @@
                     var itemToAdd = {};
                     itemToAdd.name = $scope.name;
                     itemToAdd.price = $scope.price;
-                    itemToAdd.date = new Date();
-                    itemToAdd.tags = [];
-                    $scope.transactions.push(itemToAdd);
+                    itemToAdd.sold = $scope.sold;
+                    
+                    itemToAdd.date = $scope.date || new Date();
+                    itemToAdd.tags = ["hype"];
+                    // $scope.transactions.push(itemToAdd);
                     console.log($scope.transactions);
 
-                    localStorage.setItem("transactionLog", JSON.stringify($scope.transactions));
+
+                    $.ajax({ 
+                        url: "https://api.mlab.com/api/1/databases/eyecoin/collections/transactions?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws",
+                        data: JSON.stringify( itemToAdd ),
+                        type: "POST",
+                        contentType: "application/json" 
+                    }).done(function() {
+                        $scope.getandSetTransactionsFromDatabase();
+                        localStorage.setItem("transactionLog", JSON.stringify($scope.transactions));
+                        
+                    });
+
                     
                 }
 
-                $scope.deleteItem = function(item) {
-                    // console.log("Delete item");
-                    var indexToRemove = $scope.transactions.indexOf(item);
+                $scope.updateItem = function(transaction) {
+                    console.log("Update Item");
+
+
+                    var b = "59e92c5abd966f5cb6d97386";
+
+                    var transID = transaction._id.$oid;
+
+                    var reqURL = "https://api.mlab.com/api/1/databases/eyecoin/collections/transactions/" + transID + "?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws"
+                    
+                    $.ajax( { url: reqURL,
+                        data: JSON.stringify(  { "$set" : { "tags" : ["succesful","update"] } } ),
+                        type: "PUT",
+                        contentType: "application/json" } );
+
+
+                    // $.ajax( { url: reqURL,
+                    //           data: JSON.stringify(  { "$set" : { "tags" : ["succesful","update"] } } ),
+                    //           type: "PUT",
+                    //           contentType: "application/json" } );
+                }
+
+                $scope.updateItemTags = function(transaction, tags) {
+
+                    console.log("Updating Item Tags");
+                    var transID = transaction._id.$oid;
+
+                    var reqURL = "https://api.mlab.com/api/1/databases/eyecoin/collections/transactions/" + transID + "?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws"
+                    
+                    $.ajax( { url: reqURL,
+                        data: JSON.stringify(  { "$set" : { "tags" : tags } } ),
+                        type: "PUT",
+                        contentType: "application/json" }
+                    ).done(function() {
+                        alert("finished updateItemTags");
+                        console.log("Finished updateItemTags");
+                        $scope.getandSetTransactionsFromDatabase();
+                    });
+                
+
+                }
+
+                $scope.getandSetTransactionsFromDatabase = function () {
+                    console.log("Calling getTransactionsFromDatabase")
+                    $.ajax({ 
+                        url: "https://api.mlab.com/api/1/databases/eyecoin/collections/transactions?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws",
+                        type: "GET",
+                        contentType: "application/json" 
+                    }).done(function(data) {
+                        //data is already a JSON object.
+                        console.log("finished getTransactionsFromDatabase AJAX call");
+
+                        //http://jimhoskins.com/2012/12/17/angularjs-and-apply.html
+                        $scope.$apply(function() {
+                            $scope.transactions = data;
+                        })
+                        
+                        console.log($scope.transactions);
+                    });
+                }
+                $scope.getandSetTransactionsFromDatabase();
+
+                $scope.deleteItem = function(transaction) {
+                    console.log("Delete item");
+                    console.log(transaction);
+
+                    var transID = transaction._id.$oid;
+                    var indexToRemove = $scope.transactions.indexOf(transaction);
+                    console.log(indexToRemove);
                     $scope.transactions.splice(indexToRemove,1);
 
+                    var reqURL = "https://api.mlab.com/api/1/databases/eyecoin/collections/transactions/" + transID + "?apiKey=Un-mm4UdPQsFEX65W4eplZvLGtEBjJws"
+
+
+                    $.ajax( { url: reqURL,
+                        type: "DELETE",
+                        async: true,
+                        timeout: 0
+                    }).done(function() {
+                        $scope.getandSetTransactionsFromDatabase();
+                        alert("done")
+                        localStorage.setItem("transactionLog", JSON.stringify($scope.transactions));
+                        
+                    });
+
+
+                    
                     // console.log($scope.transactions);
                 }
 
-                $scope.exportLog = function() {
-                    console.log("Export log");
-                    localStorage.setItem("transactionLog", JSON.stringify($scope.transactions));
-                    var log = localStorage.getItem("transactionLog");
-                    console.log(JSON.stringify(log));   
-                    
-                    $("#test").val(JSON.stringify(log));
-                }
+                $scope.populateTags = function(transaction) {
+                    //$("tr[trans_id='59ee1d9ec2ef163e8f753e4f']")
+                    console.log("Populate Tags");
+                    console.log(transaction);
 
+                    if (transaction) {
+                        var query = transaction._id.$oid;
 
-                $scope.pomodoros = [
-                    {name: "Pray", count: 1},
-                    {name: "Work", count: 2}
-                ];
-    
-    
-                $scope.resellLog = [
-                    {
-                        name: "Red Nas Tee",
-                        retail: 33,
-                        sold: 360
-                    },
-                    {
-                        name: "100 Bill Pendant",
-                        retail: 330,
-                        sold: 0
-                    }
-                ]
-    
-                $scope.resetResellLog = function() {
-                    $scope.resellLog = [
-                        {
-                            name: "Red Nas Tee",
-                            retail: 33,
-                            sold: 360
-                        },
-                        {
-                            name: "100 Bill Pendant",
-                            retail: 330,
-                            sold: 0
+                        if (transaction._id.$oid == undefined) {
+                            console.log("undefined");
+                            console.log(transaction);
                         }
-                    ]
-    
-                    localStorage.setItem("resellLog", JSON.stringify($scope.resellLog));                
-                }
-    
-                $scope.getPaid = function() {
-                    var total = 0;
-                    for (var i=0; i<$scope.resellLog.length; i++) {
-                        var product = $scope.resellLog[i];
-                        total += parseInt(product.retail);
-                    }
-                    return total;
-                }
-    
-                $scope.getSold = function () {
-                    var total = 0;
-                    for (var i=0; i<$scope.resellLog.length; i++) {
-                        var product = $scope.resellLog[i];
-                        total += parseInt(product.sold) ;
-                    }
-                    return total;
-                }
-    
-                // $scope.addItem = function() {
-                //     var itemName = $("#itemName").val();
-                //     var itemRetail = $("#itemRetail").val();
-                //     var itemSold = $("#itemSold").val();
-                    
-                //     console.log(1)
-                //     $scope.resellLog.push( {
-                //         name: itemName,
-                //         retail: itemRetail,
-                //         sold: itemSold
-                //     });
-    
-                //     localStorage.setItem("resellLog", JSON.stringify($scope.resellLog));
-                //     console.log("Set localStorage");
-                //     console.log(JSON.parse(localStorage.getItem("resellLog")));
-                // }
-    
-                $scope.removeItem = function(item) {
-                    var index = $scope.resellLog.indexOf(item);
-                    $scope.resellLog.splice(index, 1);
-    
-                    localStorage.setItem("resellLog", JSON.stringify($scope.resellLog));                
-                }
-    
-                var resellLog = JSON.parse(localStorage.getItem("resellLog"));
-                
-                if (resellLog && resellLog.length > 0) {
-                    //console.log("Using previous resellLog")
-                    $scope.resellLog = resellLog;
-                }
-    
-                $scope.calculateResell = function() {
-                    var purchasePrice = $scope.purchase;
-                    //eBay 10% + Paypal 4% 
-                    purchasePrice = purchasePrice / (1-.1-.04);
-                    //console.log(purchasePrice)
-                    var shippingPrice = $scope.shipping;
-    
-                    if (shippingPrice) {
-                        purchasePrice = purchasePrice + shippingPrice;
-                    }
-    
-                    return purchasePrice;
-    
-                }
-    
-    
-                $scope.habitLog = { 
-                    habits: [{
-                        date: new Date(1432811030 * 1000),
-                        message: 'Some text 01'
-                    },
-                    {
-                        date: new Date(1432731600 * 1000),
-                        message: 'Some text 02'
-                    },
-                    {
-                        date: new Date(1432819703 * 1000),
-                        message: 'Some text 03'
-                    }
-                ]};
-    
-                var habitLog = JSON.parse(localStorage.getItem("habitLog"));
-    
-                if (habitLog && habitLog.habits.length > 0) {
-                    console.log("Using previous habitLog")
-                    console.log(habitLog)
-                    $scope.habitLog = habitLog;
-                }
-    
-                
-    
-                $scope.convertTo = function () {
-                    $scope.convertedHabitLog = {};
-                    angular.copy($scope.habitLog, $scope.convertedHabitLog);
-                    var groups = {};
-    
-                    var habits = $scope.convertedHabitLog.habits;
-                    for (var i=0; i <habits.length;i++) {
-                        console.log( habits[i])                  
-                      
-                        var tempDate = new Date(habits[i].date);
-    
-                        groups[tempDate.toLocaleDateString()] = groups[tempDate.toLocaleDateString()] || [];
-                        habits[i].time = tempDate.toLocaleTimeString();
-                        habits[i].date = new Date(habits[i].date);
-                        console.log(habits[i].date.toLocaleDateString())
                         
-                        groups[tempDate.toLocaleDateString()].push(habits[i]);
+                        console.log(query);
+                        console.log($(query));
+                        
+                        $("#"+query).empty();
+
+                        console.log(transaction.tags)
+                        new Taggle(query, {
+                            tags: transaction.tags,
+                        
+                            onTagAdd: function(event, tag) {
+                                console.log(event);
+                                console.log(tag);
+                                console.log(this);
+                                transaction.tags.push(tag);
+                                //console.log(transaction.tags.push(tag));
+                                console.log(transaction.tags);
+
+                                $scope.updateItemTags(transaction, transaction.tags);
+                        
+                            },
+
+                            onTagRemove: function(event, tag) {
+                                var indexToRemove = transaction.tags.indexOf(tag);
+                                console.log("Removing tag");
+                                transaction.tags.splice(indexToRemove,1)
+
+                                $scope.updateItemTags(transaction, transaction.tags);
+                                
+                            },
+                        
+                            id: query
+                        });
+
+                                    
                     }
-                    $scope.convertedHabitLog = groups;
-                    console.log($scope.convertedHabitLog)
-                };
-    
-                $scope.convertTo();
-    
-    
-                $scope.addHabit = function() {
-                    console.log("added")
-                    $scope.habitLog.habits.push( {
-                        date: new Date(),
-                        message: ""
-                    });
-                    $scope.convertTo();
-    
-                    localStorage.setItem("habitLog", JSON.stringify($scope.habitLog));
-                    console.log("Set localStorage habitLog");
-                    console.log(JSON.parse(localStorage.getItem("habitLog")));
                 }
-    
-    
-                //Shows a textarea with the Stringified JSON Object.
-                //This string can be saved in a file or emailed so there is a backup of data.
-                $scope.exportHabits = function() {
-    
-                    console.log("Export Habits");
-    
-                    var habits = JSON.parse(localStorage.getItem("habitLog"));
-                    console.log(habits);
-    
-                    console.log(JSON.stringify(habits));
-                    $("#exportTextArea").show();
-                    $("#exportTextArea").val(JSON.stringify(habits));
-    
+
+                $scope.getTotal1 = function(listName) {
                     
+                    var sum = 0;
+                    for (var i=0; i<$scope.transactions.length; i++) {
+                        if (isNaN(parseFloat($scope.transactions[i][listName])) === false)
+                        sum += parseFloat($scope.transactions[i][listName]);
+                    }
+                    return sum;
                 }
-    
-                //Sets scope.habitLog to the string provided.
-                $scope.setHabits = function() {
-    
-                    console.log("Set Habits");
-    
-                    var habitLog = JSON.parse($("#exportTextArea").val());
-                    $scope.habitLog = habitLog;
-                    $scope.convertTo();
-                    localStorage.setItem("habitLog", JSON.stringify($scope.habitLog));
-    
-                } 
-    
                 
-    
-    
-            });
+                $scope.getTotal = function() {
+
+                    var sum = 0;
+                    for (var i=0; i<$scope.transactions.length; i++) {
+                        if (isNaN(parseFloat($scope.transactions[i].price)) === false)
+                        sum += parseFloat($scope.transactions[i].price);
+                    }
+                    return sum;
+                }
+
+                $scope.getProfit = function() {
+
+                    return $scope.getTotal1("sold") - $scope.getTotal1("price");
+                }
+                
+            }]);
     })(window.angular);
     
