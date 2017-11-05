@@ -5,19 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chul Ahn</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <style>
         #intro {
             text-align: center;
             background-color: rebeccapurple;
             color: white;
+            background-image: url(img/boat.jpg);
+            background-size: cover;
+            background-position: inherit;
+            height: 500px;
         }
 
-        #intro .container {
-            padding-top: 100px;
-            padding-bottom: 100px;
+        @media all and (max-width: 1024px) {
+            #intro {
+                background-position: top;
+            }
         }
+
+
+
+        #intro .container {
+            padding-bottom: 100px;
+            background-color: black;
+            opacity: .5;
+            border-radius: 5px;
+            width: 25%;
+            position: relative;
+            top: 100px;
+            padding-bottom: 10px;
+        }
+
+        @media all and (max-width: 420px) {
+            #intro .container{
+                width: 50%;
+            }
+        }
+
+        
 
         #about {
             text-align: center;
@@ -28,10 +55,29 @@
 
         #skills {
             text-align: center;
-            padding: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
             background-color: greenyellow;
             color: white;
         }
+
+        #known {
+            list-style: none;
+        }
+
+        #projects {
+            text-align: center;
+            background-color: red;
+            color: white;
+        }
+
+        #photos {
+            text-align: center;
+            background-color: blue;
+            color: white;
+        }
+
+       
     </style>
 </head>
 <body>
@@ -39,7 +85,7 @@
         <div class="container">
 
             <h2>Chul Ahn</h2>
-            <h5>Web Developer, Art Fan, Fitness Dabbler</h5>
+            <h5>Web Developer, Hypebeast, Baller</h5>
         </div>
         
     </section>
@@ -50,48 +96,59 @@
     </section>
 
     <section id="skills">
-        I Know
+        <h3>Languages / Frameworks Known :</h3>
 
-        <ul>
-            <li>
+        <ul id="known">
+            <li class="col-xs-4">
                 HTML5
             </li>
-            <li>
+            <li class="col-xs-4">
                 CSS3
             </li>
-            <li>
+            <li class="col-xs-4">
                 Java
             </li>
-            <li>
+            <li class="col-xs-4">
                 Python
             </li>
-            <li>
+            <li class="col-xs-4">
                 JavaScript
             </li>
-            <li>
+            <li class="col-xs-4">
                 C#
             </li>
-            <li>
+            <li class="col-xs-4">
                 JQuery
             </li>
-            <li>
+            <li class="col-xs-4">
                 NodeJS
             </li>
-            <li>
+            <li class="col-xs-4">
                 SQL
             </li>
-            <li>
+            <li class="col-xs-4">
                 D3.js
             </li>
-            <li>
+            <li class="col-xs-4">
                 AngularJS 1.5
             </li>
-            <li>
+            <li class="col-xs-4">
                 Git
             </li>
-            <li>
+            <li class="col-xs-4">
                 LESS
             </li>
+        </ul>
+
+        <br/><br/><br/><br/><br/>
+        <h3>Skills :</h3>
+
+        <ul>
+            <li>Debugging</li>
+            <li>Cross-browser testing</li>
+            <li>Responsive designing</li>
+            <li>Version Control</li>    
+
         </ul>
 
         I am learning
@@ -99,10 +156,20 @@
         
 
     </section>
+
+    <section id="projects">
+        Here are my projects
+    </section>
+
+    <section id="photos">
+        Here are my pictures
+    </section>
     
 </body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </html>
