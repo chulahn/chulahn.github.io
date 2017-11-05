@@ -55,8 +55,8 @@
 
         #skills {
             text-align: center;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 25px;
+            padding-bottom: 25px;
             background-color: greenyellow;
             color: white;
         }
@@ -86,7 +86,6 @@
         }
 
         #projects .img_placeholder {
-            width: 300px;
             height: 120px;
             font-size: 18px;
         }
@@ -122,6 +121,9 @@
     </section>
 
     <section id="skills">
+
+    <div class="container">
+
         <h3>Languages / Frameworks Known</h3>
 
         <ul id="known">
@@ -159,7 +161,7 @@
                 D3.js
             </li>
             <li class="col-xs-4">
-                AngularJS 1.5
+                AngularJS
             </li>
             <li class="col-xs-4">
                 Git
@@ -176,14 +178,14 @@
             <li>Responsive designing</li>
             <li>Version Control</li>    
         </ul>
+        </div>
     </section>
 
     <section id="projects">
         Here are my projects
 
         <div class="container">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-5 project">
+            <div class="col-xs-6 project">
                 Starting Strength
                 <div class="img_placeholder">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
@@ -191,11 +193,14 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xs-5 project">
+            <div class="col-xs-6 project">
                 Ebay Stats
-                <div class="img_placeholder"></div>
+                <div class="img_placeholder">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        IMG HERE
+                    </a>
+                </div>
             </div>
-            <div class="col-xs-1"></div>
         </div>
         <a href="http://www.github.com/chulahn">Github</a>
     </section>
@@ -219,9 +224,9 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h2>Starting Strength Calculator</h2>                            
-                            <h3> <a href="http://chulahn.github.io/StartingStrength/">A basic warm-up calculator for Starting Strength</a></h3> 
+                            <h4> <a href="http://chulahn.github.io/StartingStrength/">A basic warm-up calculator for Starting Strength</a></h4>
 
-                            This is an application designed for those following Rippetoe's Starting Strength weight lifting program.  The goal is to make sure the user is properly warmed up before doing working sets to minimize the chance of injury.
+                            This is an application made for those following Rippetoe's Starting Strength weight lifting program.  The goal is to make sure the user is properly warmed up before doing working sets to minimize the chance of injury.  The app was designed to be minimal so it loads fast in the gym.
 
                             <h3>Features</h3>
                             <ul>
@@ -240,9 +245,63 @@
                             </p>
 
                             Made : Nov 2014<br/>
-                            Github : <a href="http://github.com/chulahn/StartingStrength/">Basic Starting Strength Calc</a><br/>
+                            Github : <a href="http://github.com/chulahn/StartingStrength/">Basic Starting Strength Calc FIX LINK</a><br/>
                             
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <div class="text-right">
+
+                            <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>EBay Average Price Calculator/Visualization</h2>                            
+                            <h4><a href="http://ebay-averagulizer.herokuapp.com/">A tool view price trends on eBay</a></h4>
+
+                            This is an application made to display price and how it changes over a period of time.  It also gives basic statistics such as max , min, and average prices.
+
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Show average item price by day</li>
+                                <li>Ability to get statistics on user selected group of items</li>
+                                <li>Dynamic filter by
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Date</li>
+                                        <li>Price</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h3>Built With</h3>
+                            <ul>
+                              <li>JQuery</li>
+                              <li>NodeJS</li>
+                              <li>AngularJS</li>
+                              <li>D3.js</li>
+                            </ul>
+                            </p>
+
+                            Made : Mar 2015<br/>
+                            Github : <a href="http://github.com/chulahn/StartingStrength/">Ebay Averagulizer FIX LINK</a><br/>
+                            
+                            <div class="text-right">
+
+                            <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button></div>
                         </div>
                     </div>
                 </div>
