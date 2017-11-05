@@ -63,12 +63,38 @@
 
         #known {
             list-style: none;
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #known li {
+            border: 1px solid black;
+        }
+
+        #otherSkills {
+            text-align: left;
         }
 
         #projects {
             text-align: center;
             background-color: red;
             color: white;
+        }
+
+        #projects .project {
+            border: 1px solid black;
+        }
+
+        #projects .img_placeholder {
+            width: 300px;
+            height: 120px;
+            font-size: 18px;
+        }
+
+        @media all and (max-width: 1024px) {
+            #projects .img_placeholder {
+                width: initial;
+            }
         }
 
         #photos {
@@ -96,7 +122,7 @@
     </section>
 
     <section id="skills">
-        <h3>Languages / Frameworks Known :</h3>
+        <h3>Languages / Frameworks Known</h3>
 
         <ul id="known">
             <li class="col-xs-4">
@@ -106,16 +132,19 @@
                 CSS3
             </li>
             <li class="col-xs-4">
+                LESS
+            </li>
+            <li class="col-xs-4">
                 Java
             </li>
             <li class="col-xs-4">
                 Python
             </li>
             <li class="col-xs-4">
-                JavaScript
+                C#
             </li>
             <li class="col-xs-4">
-                C#
+                JavaScript
             </li>
             <li class="col-xs-4">
                 JQuery
@@ -135,35 +164,91 @@
             <li class="col-xs-4">
                 Git
             </li>
-            <li class="col-xs-4">
-                LESS
-            </li>
+            
         </ul>
 
         <br/><br/><br/><br/><br/>
-        <h3>Skills :</h3>
+        <h3>Skills</h3>
 
-        <ul>
+        <ul id="otherSkills">
             <li>Debugging</li>
             <li>Cross-browser testing</li>
             <li>Responsive designing</li>
             <li>Version Control</li>    
-
         </ul>
-
-        I am learning
-
-        
-
     </section>
 
     <section id="projects">
         Here are my projects
+
+        <div class="container">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-5 project">
+                Starting Strength
+                <div class="img_placeholder">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        IMG HERE
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-5 project">
+                Ebay Stats
+                <div class="img_placeholder"></div>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <a href="http://www.github.com/chulahn">Github</a>
     </section>
 
     <section id="photos">
         Here are my pictures
     </section>
+
+
+
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Starting Strength Calculator</h2>                            
+                            <h3> <a href="http://chulahn.github.io/StartingStrength/">A basic warm-up calculator for Starting Strength</a></h3> 
+
+                            This is an application designed for those following Rippetoe's Starting Strength weight lifting program.  The goal is to make sure the user is properly warmed up before doing working sets to minimize the chance of injury.
+
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Calculate Warm-up reps per Exercise</li>
+                                <li>Show Workout of the Day</li>
+                                <li>Rank your strength based on weight/gender</li>
+                                <li>Ability to add custom plates</li>
+                            </ul>
+
+                            <h3>Built With</h3>
+                            <ul>
+                              <li>JQuery</li>
+                              <li>JQueryUI</li>
+                              <li>JQueryMobile</li>
+                            </ul>
+                            </p>
+
+                            Made : Nov 2014<br/>
+                            Github : <a href="http://github.com/chulahn/StartingStrength/">Basic Starting Strength Calc</a><br/>
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </body>
 
