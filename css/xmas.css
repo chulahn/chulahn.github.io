@@ -1,0 +1,18 @@
+
+header, footer {
+    background: green;
+    color: rgb(173, 14, 14);
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    background: rgb(21, 21, 61);
+    color: white;
+}
