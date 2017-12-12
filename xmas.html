@@ -13,6 +13,8 @@
     <link href="css/xmas.css" rel="stylesheet" type="text/css">
 
 </head>
+
+
 <body>
     
     <header>
@@ -22,9 +24,30 @@
     <section>
         <h2>Welcome to My Site</h2>
 
+
+        <canvas id="scene" width="400" height="100" style="background: white">
+
+
+        </canvas>
+
         <svg width="100" height="100">
             <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
         </svg>
+
+        <svg width="200" height="200">
+            <rect width="50" height="250" style="fill:rgb(128, 61, 16)" />
+            <polygon points="25,0 0,50 50,50" stroke="green" fill="green"></triangle>
+        </svg>
+
+        <div >
+            Points
+            <ul id="lineList">
+                <li>
+                    X: , Y:
+                </li>
+            </ul>
+
+        </div>
     </section>
 
 
@@ -37,5 +60,69 @@
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>    
+    $(document).ready(function() {
+        // $("canvas#scene").on("mouseover", function(event) {
+        //     //console.log(event);
 
+        //     var e = event.originalEvent;
+        //     console.log(e);
+
+        //     console.log("X: " + e.clientX + ", Y: " + e.clientY);
+        // });
+
+
+        var points = [];
+
+        $("canvas#scene").on("click", function(event) {
+            
+            var canv =  $("canvas#scene")[0];
+            canv = canv.getContext("2d");
+
+            console.log(event);
+
+            var e = event.originalEvent;
+            console.log(e);
+
+            console.log("X: " + e.clientX + ", Y: " + e.clientY);
+        
+            var coord = {};
+            coord.x = e.clientX;
+            coord.y = e.clientY;
+            points.push(coord);
+            console.log(points)
+
+            if (points.length == 2) {
+                console.log("Drawing a Line");
+
+
+                var firstPoint = points[0];
+                
+                var secondPoint = points[1];
+
+                canv.moveTo(firstPoint.x, firstPoint.y);
+                canv.lineTo(secondPoint.x, secondPoint.y);
+                
+                canv.strokeStyle = "#231245";
+                canv.fillStyle = "#231245";
+                
+                canv.stroke();
+
+                points.shift();
+                console.log(points);
+
+                var lineLI = document.createElement("li");
+                lineLI.innerHTML = "P1 :" + firstPoint.x+","+ firstPoint.y + " P2 :" + secondPoint.x+"," + secondPoint.y;
+
+                $("#lineList").append(lineLI);
+
+
+            }
+        
+        });
+
+        
+    });
+</script>
+        
 </html>
