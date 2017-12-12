@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://sean.is/assets/projects/taggle/css/taggle.css">
     <link rel="stylesheet" href="css/index.css">
     
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+    
     
    
 </head>
@@ -45,7 +47,7 @@
                     </td>
                     <td>{{transactions.length}} items</td>
                     <td><div class="col-xs-6">{{getTotal1("price")}}</div><div class="col-xs-6">{{ (getTotal() / transactions.length) | number: 2 }}</div></td>
-                    <td><span ng-class="(getProfit() > 0) ? 'profit' : 'loss'">{{getProfit()}}</span></td>
+                    <td>{{getTotal1("sold")}} {{getFlipInvestment()}} <span ng-class="(getProfit() > 0) ? 'profit' : 'loss'">{{getProfit()}}</span></td>
                     <td id="testTag"></td>
                     <td>No delete</td>
                 </tr>
@@ -57,7 +59,10 @@
 
         </section>
     </div>
-        <div id="testContainer">
+    <div id="testContainer">
+        <section>
+            <a id="testEditable" data-type="text" data-title="Test Editable.  Enter name">Job Change</a>
+        </section>
         <section id="addTransactionContainer">
             <div class="row">
                 <div class="col-xs-1">

@@ -255,6 +255,15 @@
                     return sum;
                 }
 
+                $scope.getFlipInvestment = function() {
+                    var sum = 0;
+                    for (var i=0; i<$scope.transactions.length; i++) {
+                        if (isNaN(parseFloat($scope.transactions[i].price)) === false && $scope.transactions[i].sold > 0)
+                        sum += parseFloat($scope.transactions[i].price);
+                    }
+                    return sum;
+                }
+
                 $scope.getProfit = function() {
 
                     return $scope.getTotal1("sold") - $scope.getTotal1("price");
