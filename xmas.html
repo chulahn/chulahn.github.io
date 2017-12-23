@@ -30,16 +30,16 @@
 
         </canvas>
 
-        <svg width="100" height="100">
+        <svg id="minionTest" width="100" height="100">
             <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
         </svg>
 
-        <svg width="200" height="200">
+        <svg id="treeTest" width="200" height="200">
             <rect width="50" height="250" style="fill:rgb(128, 61, 16)" />
             <polygon points="25,0 0,50 50,50" stroke="green" fill="green"></triangle>
         </svg>
 
-        <div >
+        <div>
             Points
             <ul id="lineList">
                 <li>
@@ -71,6 +71,32 @@
         //     console.log("X: " + e.clientX + ", Y: " + e.clientY);
         // });
 
+
+        var container = document.createElement("svg");
+        container = $(container);
+        container.attr("id", "innerContainerTest");
+        
+        container.attr("width", "200px");
+        container.attr("height", "200px");
+
+        
+        var snow = document.createElement("rect");
+        snow = $(snow);
+        snow.attr("width", "50")
+        
+        snow.attr("height", "50")
+
+        snow.attr("style", "fill:rgb(128, 61, 16)")
+        container.append(snow)
+
+        $("#scene").append(container);
+        $("container").append(snow)
+
+        
+        // <svg width="200" height="200">
+        //     <rect width="50" height="250" style="fill:rgb(128, 61, 16)" />
+        //     <polygon points="25,0 0,50 50,50" stroke="green" fill="green"></triangle>
+        // </svg>
 
         var points = [];
 
