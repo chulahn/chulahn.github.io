@@ -21,9 +21,24 @@
         <h1>Hello There</h1>
     </header>
 
+    
+
     <section>
         <h2>Welcome to My Site</h2>
 
+        <svg id="reindeerTest" width="100" height="50">
+            <rect width="50" height="50" cx="50" style="fill:rgb(128, 61, 16)" />
+        </svg>
+
+        <section id="strangerVidContainer">
+            <video id="strangerVid" preload="none" playsinline="" poster="https://pbs.twimg.com/ext_tw_video_thumb/941485744459169792/pu/img/YvgXJUkLqd41-qBL.jpg" src="blob:https://twitter.com/b29c3c45-b529-451f-bf41-5675fa7d8f9e" style="width: 640px; height: 100%; transform: rotate(0deg) scale(1); display: none;"></video>
+            Add Clouds background.<br>
+            Add Reindeer SVG / parallex CSS Animation<br>
+            Add Snowfall <br>
+            Add Trees background.<br>
+            Add Details to Presents and move them around<br>
+            Get Drawn canvas working
+        </section>
 
         <canvas id="scene" width="400" height="100" style="background: white">
 
@@ -39,6 +54,10 @@
             <polygon points="25,0 0,50 50,50" stroke="green" fill="green"></triangle>
         </svg>
 
+        <svg id="boxText" width="200" height="200">
+            <rect href="#portfolioModal1" data-toggle="modal" width="50" height="50" cx="50" style="fill:rgb(0, 120, 0)" />
+        </svg>
+
         <div>
             Points
             <ul id="lineList">
@@ -52,9 +71,109 @@
 
 
     <footer>
+        <img src="img/nike-acg-k9like.jpg" style="width:240px">
+        <br/>
         By: Chul Ahn
     </footer>
 
+    <!-- Modal Section Start -->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Starting Strength Calculator</h2>                            
+                            <h4> <a href="http://chulahn.github.io/StartingStrength/">A basic warm-up calculator for Starting Strength</a></h4>
+
+                            This is an application made for those following Rippetoe's Starting Strength weight lifting program.  The goal is to make sure the user is properly warmed up before doing working sets to minimize the chance of injury.  The app was designed to be minimal so it loads fast in the gym.
+
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Calculate Warm-up reps per Exercise</li>
+                                <li>Show Workout of the Day</li>
+                                <li>Rank your strength based on weight/gender</li>
+                                <li>Ability to add custom plates</li>
+                            </ul>
+
+                            <h3>Built With</h3>
+                            <ul>
+                              <li>JQuery</li>
+                              <li>JQueryUI</li>
+                              <li>JQueryMobile</li>
+                            </ul>
+
+                            Made : Nov 2014<br/>
+                            Github : <a href="https://github.com/chulahn/StartingStrength">Basic Starting Strength Calc</a><br/><br>
+                            
+                            <div class="text-right">
+                                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>EBay Price Trend Visualizer</h2>                            
+                            <h4><a href="http://ebay-averagulizer.herokuapp.com/">A tool view price trends on eBay</a></h4>
+
+                            This is an application made to display price and how it changes over a period of time.  It also gives basic statistics such as max , min, and average prices.
+
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Show average item price by day</li>
+                                <li>Ability to get statistics on user selected group of items</li>
+                                <li>Dynamic filter by
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Date</li>
+                                        <li>Price</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h3>Built With</h3>
+                            <ul>
+                              <li>JQuery</li>
+                              <li>NodeJS</li>
+                              <li>AngularJS</li>
+                              <li>D3.js</li>
+                            </ul>
+
+                            Made : Mar 2015<br/>
+                            Github : <a href="https://github.com/chulahn/angular-ebaySearcher">Ebay Averagulizer</a><br/><br/>
+                            
+                            <div class="text-right">                   
+                                <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Section End -->
 </body>
 
 
@@ -99,6 +218,11 @@
         // </svg>
 
         var points = [];
+
+        $("#reindeerTest rect").on("click", function(event) {
+
+            $(this).addClass("expand");
+        });
 
         $("canvas#scene").on("click", function(event) {
             

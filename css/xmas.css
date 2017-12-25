@@ -6,14 +6,33 @@ header, footer {
 color: rgb(128, 61, 16);
 }
 
+header {
+	text-align: center;
+	width: 100%;
+	top: 0;
+	padding:25px;
+}
+
 footer {
     text-align: center;
     position: absolute;
-    bottom: 0;
-    width: 100%;
+	width: 100%;
 }
 
 body {
     background: rgb(21, 21, 61);
     color: white;
+}
+
+section#strangerVidContainer {
+	text-align: center;
+}
+
+.modal-content {
+	background: red;
+}
+
+.expand {
+	width: 100px;
+	transition: 2s ease width;
 }
