@@ -221,7 +221,10 @@
 
         $("#reindeerTest rect").on("click", function(event) {
 
-            $(this).addClass("expand");
+            var $this = $(this);
+
+            ($this.hasClass("expand") == true) ? $this.removeClass("expand") : $(this).addClass("expand")
+
         });
 
         $("canvas#scene").on("click", function(event) {
