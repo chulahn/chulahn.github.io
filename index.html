@@ -17,6 +17,7 @@
             background-size: cover;
             background-position: inherit;
             height: 500px;
+            background-attachment: fixed;
         }
 
         @media all and (max-width: 1024px) {
@@ -47,6 +48,7 @@
             background-color: gray;
             color: white;
             padding: 50px;
+            height: 200px;
         }
 
         #skills {
@@ -55,6 +57,11 @@
             padding-bottom: 20px;
             background-color: #74b313;
             color: white;
+            background-image: url(img/lake.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            background-attachment: fixed;
         }
 
         #known {
@@ -98,6 +105,11 @@
             font-size: 18px;
         }
 
+        #projects .project img.img-responsive {
+            max-height: 260px;
+            display: inline-block;
+        }
+
         @media all and (max-width: 1024px) {
             #projects .img_placeholder {
                 width: initial;
@@ -109,6 +121,11 @@
             background-color: blue;
             color: white;
             padding-bottom: 25px;
+            background-image: url(img/mountain.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
         }
 
         footer {
@@ -116,6 +133,19 @@
             color: white;
             text-align: center;
         }       
+
+        .close-modal {
+
+            text-align: right;
+            font-size:24px;
+            top:25px;
+            right:25px;
+            position:absolute;
+        }
+
+        .close-modal:hover {
+            cursor:pointer;
+        }
     </style>
 </head>
 <body>
@@ -217,11 +247,15 @@
     <section id="photos">
         <div class="container">
             <h3>Gallery</h3>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-8">  
-                <img class="img-responsive" src="img/mountain1.jpg">
+            <div class="col-xs-4">  
+                <img class="img-responsive" src="img/mountain.jpg">
             </div>
-            <div class="col-xs-2"></div>
+            <div class="col-xs-4">  
+                <img class="img-responsive" src="img/boat.jpg">
+            </div>
+            <div class="col-xs-4">  
+                <img class="img-responsive" src="img/lake.jpg">
+            </div>
         </div>
 
     </section>
@@ -238,6 +272,7 @@
     <div class="modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
+                X
                 <div class="lr">
                     <div class="rl">
                     </div>
@@ -283,6 +318,7 @@
     <div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
+                X
                 <div class="lr">
                     <div class="rl">
                     </div>
