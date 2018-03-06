@@ -68,6 +68,37 @@
             height: 100px;
         }
 
+        #skills .container {
+            background: rgba(0,0,0,.3);
+            border-radius: 5px;
+        }
+    
+        #skills .icon {
+            display: inline-block;
+            position: relative;
+            height: 100px;
+            z-index: 2;
+        }
+
+        #skills .icon img:hover {
+            opacity: 0;
+        }
+
+        #skills .icon span.icon-text {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            z-index: -1;
+            
+        }
+        #skills .icon:hover span.icon-text{
+            opacity: 1;
+            visibility: visible;
+        }
+
+
         #known {
             list-style: none;
             text-align: left;
@@ -169,40 +200,63 @@
         <div class="container">
             <h3>Languages / Frameworks Known</h3>
             
-            <img src="img/html-icon.png">
-            <img src="img/css-icon.png">
-            <img src="img/javascript-icon.png">
-            <img src="img/jquery-icon.png">
-            <img src="img/nodejs-icon.svg">
-            <img src="img/angular-icon.png">
-            <img src="img/java-icon.png">
-            <img src="img/csharp-icon.png">
-            <img src="img/python-icon.png">
-            <img src="img/git_icon.svg.png">
-            <br/>
-            <br/>
+            <span class="icon">
+                <img src="img/html-icon.png">
+                <span class="icon-text">HTML5</span>
+            </span>
 
-            <ul id="known">
-                
-                <li class="col-xs-4">
-                    LESS
-                </li>
-                <li class="col-xs-4">
-                    SCSS
-                </li>
-                <li class="col-xs-4">
-                    JQueryUI
-                </li>
-                <li class="col-xs-4">
-                    JQueryMobile
-                </li>
-                <li class="col-xs-4">
-                    SQL
-                </li>
-                <li class="col-xs-4">
-                    D3.js
-                </li>
-            </ul>
+            <span class="icon">
+                <img src="img/css-icon.png">
+                <span class="icon-text">CSS3</span>
+            </span>
+            <span class="icon">
+                <img src="img/javascript-icon.png">
+                <span class="icon-text">Javascript</span>
+            </span>
+            <span class="icon">
+                <img src="img/jquery-icon.png">
+                <span class="icon-text">JQuery</span>
+            </span>
+            <span class="icon">
+                <img src="img/nodejs-icon.svg">
+                <span class="icon-text">NodeJS</span>
+            </span>
+            <span class="icon">
+                <img src="img/angular-icon.png">
+                <span class="icon-text">AngularJS</span>
+            </span>
+            <span class="icon">
+                <img src="img/java-icon.png">
+                <span class="icon-text">Java</span>
+            </span>
+            <span class="icon">
+                <img src="img/csharp-icon.png">
+                <span class="icon-text">C#</span>
+            </span>
+            <span class="icon">
+                <img src="img/python-icon.png">
+                <span class="icon-text">Python</span>
+            </span>
+            <span class="icon">
+                <img src="img/git_icon.svg.png">
+                <span class="icon-text">Git</span>
+            </span>
+            <span class="icon">
+                <img src="img/mongodb-icon.png">
+                <span class="icon-text">MongoDB</span>
+            </span>
+            <span class="icon">
+                <img src="img/jqueryui-icon.png">
+                <span class="icon-text">JQueryUI</span>
+            </span>
+            <span class="icon">
+                <img src="img/jquerymobile-icon.png">
+                <span class="icon-text">JQueryMobile</span>
+            </span>
+            <span class="icon">
+                <img src="img/d3js-icon.png">
+                <span class="icon-text">D3.js</span>
+            </span>
 
             <br/><br/><br/>
             
@@ -223,13 +277,15 @@
             <div class="col-xs-6 project">
                 Starting Strength
                 <a href="#portfolioModal1" data-toggle="modal">
-                    <img src="img/ss_ss.png" class="img-responsive">
+                    <span class="icon">
+                <img src="img/ss_ss.png" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 project">
                 Ebay Stats
                     <a href="#portfolioModal2" data-toggle="modal">
-                        <img src="img/ebay_ss.png" class="img-responsive">
+                        <span class="icon">
+                <img src="img/ebay_ss.png" class="img-responsive">
                     </a>
             </div>
         </div>
