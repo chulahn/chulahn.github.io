@@ -1,7 +1,175 @@
 #addTransactionContainer {
-    position: fixed;
-    background: #0891EC;
-    bottom: 0px;
-    width: 100%;
+  position: fixed;
+  background: #0891ec;
+  bottom: 0px;
+  width: 100%;
 }
 
+#intro {
+  text-align: center;
+  background-color: rebeccapurple;
+  color: white;
+  background-image: url(../img/boat.jpg);
+  background-size: cover;
+  background-position: inherit;
+  height: 500px;
+  background-attachment: fixed;
+}
+
+@media all and (max-width: 1024px) {
+  #intro {
+    background-position: top;
+  }
+}
+
+#intro .container {
+  padding-bottom: 100px;
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 5px;
+  width: 25%;
+  position: relative;
+  top: 100px;
+  padding-bottom: 10px;
+}
+
+@media all and (max-width: 420px) {
+  #intro .container {
+    width: 50%;
+  }
+}
+
+#about {
+  text-align: center;
+  background-color: gray;
+  color: white;
+  padding: 50px;
+  height: 150px;
+}
+
+#skills {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #74b313;
+  color: white;
+  background-image: url(../img/lake.jpg);
+  background-size: cover;
+  background-position: center;
+  /*height: 350px;*/
+  background-attachment: fixed;
+}
+
+#skills img {
+  height: 100px;
+}
+
+#skills .container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+#skills .icon {
+  display: inline-block;
+  position: relative;
+  height: 100px;
+  z-index: 2;
+}
+
+#skills .icon img:hover {
+  opacity: 0;
+}
+
+#skills .icon span.icon-text {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+}
+#skills .icon:hover span.icon-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+#known {
+  list-style: none;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#known li {
+  border: 1px solid black;
+}
+
+@media all and (max-width: 320px) {
+  #known li {
+    padding-left: 0px;
+  }
+}
+
+#known li:odd {
+  background: red;
+}
+
+#otherSkills {
+  text-align: left;
+}
+
+#projects {
+  text-align: center;
+  background-color: gray;
+  color: white;
+  padding-bottom: 20px;
+}
+
+#projects .project {
+  border: 1px solid black;
+  padding-bottom: 10px;
+}
+
+#projects .img_placeholder {
+  height: 120px;
+  font-size: 18px;
+}
+
+#projects .project img.img-responsive {
+  max-height: 260px;
+  display: inline-block;
+}
+
+@media all and (max-width: 1024px) {
+  #projects .img_placeholder {
+    width: initial;
+  }
+}
+
+#photos {
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding-bottom: 25px;
+  background-image: url(../img/mountain.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+footer {
+  background-color: rebeccapurple;
+  color: white;
+  text-align: center;
+}
+
+.close-modal {
+  text-align: right;
+  font-size: 24px;
+  top: 25px;
+  right: 25px;
+  position: absolute;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+}

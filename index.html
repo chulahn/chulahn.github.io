@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,199 +8,26 @@
     <title>Chul Ahn</title>
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        #intro {
-            text-align: center;
-            background-color: rebeccapurple;
-            color: white;
-            background-image: url(img/boat.jpg);
-            background-size: cover;
-            background-position: inherit;
-            height: 500px;
-            background-attachment: fixed;
-        }
-
-        @media all and (max-width: 1024px) {
-            #intro {
-                background-position: top;
-            }
-        }
-
-        #intro .container {
-            padding-bottom: 100px;
-            background-color: black;
-            opacity: .5;
-            border-radius: 5px;
-            width: 25%;
-            position: relative;
-            top: 100px;
-            padding-bottom: 10px;
-        }
-
-        @media all and (max-width: 420px) {
-            #intro .container{
-                width: 50%;
-            }
-        }
-
-        #about {
-            text-align: center;
-            background-color: gray;
-            color: white;
-            padding: 50px;
-            height: 150px;
-        }
-
-        #skills {
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            background-color: #74b313;
-            color: white;
-            background-image: url(img/lake.jpg);
-            background-size: cover;
-            background-position: center;
-            /*height: 350px;*/
-            background-attachment: fixed;
-        }
-
-        #skills img {
-            height: 100px;
-        }
-
-        #skills .container {
-            background: rgba(0,0,0,.3);
-            border-radius: 5px;
-        }
-    
-        #skills .icon {
-            display: inline-block;
-            position: relative;
-            height: 100px;
-            z-index: 2;
-        }
-
-        #skills .icon img:hover {
-            opacity: 0;
-        }
-
-        #skills .icon span.icon-text {
-            position: absolute;
-            bottom: 50px;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            z-index: -1;
-            
-        }
-        #skills .icon:hover span.icon-text{
-            opacity: 1;
-            visibility: visible;
-        }
-
-
-        #known {
-            list-style: none;
-            text-align: left;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        #known li {
-            border: 1px solid black;
-        }
-
-        @media all and (max-width: 320px) {
-            #known li {
-                padding-left: 0px;
-            }
-        }
-
-        #known li:odd {
-            background: red;
-        }
-
-        #otherSkills {
-            text-align: left;
-        }
-
-        #projects {
-            text-align: center;
-            background-color: gray;
-            color: white;
-            padding-bottom: 20px;
-        }
-
-        #projects .project {
-            border: 1px solid black;
-            padding-bottom: 10px;
-        }
-
-        #projects .img_placeholder {
-            height: 120px;
-            font-size: 18px;
-        }
-
-        #projects .project img.img-responsive {
-            max-height: 260px;
-            display: inline-block;
-        }
-
-        @media all and (max-width: 1024px) {
-            #projects .img_placeholder {
-                width: initial;
-            }
-        }
-
-        #photos {
-            text-align: center;
-            background-color: blue;
-            color: white;
-            padding-bottom: 25px;
-            background-image: url(img/mountain.jpg);
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-
-        }
-
-        footer {
-            background-color: rebeccapurple;
-            color: white;
-            text-align: center;
-        }       
-
-        .close-modal {
-
-            text-align: right;
-            font-size:24px;
-            top:25px;
-            right:25px;
-            position:absolute;
-        }
-
-        .close-modal:hover {
-            cursor:pointer;
-        }
-    </style>
+    <link href="css/index.css" rel="stylesheet">
 </head>
+
 <body>
     <section id="intro">
         <div class="container">
             <h2>Chul Ahn</h2>
-            <h5>Web Developer, Hypebeast, Baller</h5>
+            <h5>Web Developer, Hypebeast, Learner</h5>
         </div>
     </section>
 
     <section id="about">
-        This is my personal website.  You can check out my past projects and photos.  <br/>
-        I started coding in 2008.
+        This is my personal website. You can check out my past projects and photos.
+        <br/> I started coding in 2008.
     </section>
 
     <section id="skills">
         <div class="container">
             <h3>Languages / Frameworks Known</h3>
-            
+
             <span class="icon">
                 <img src="img/html-icon.png">
                 <span class="icon-text">HTML5</span>
@@ -258,15 +86,17 @@
                 <span class="icon-text">D3.js</span>
             </span>
 
-            <br/><br/><br/>
-            
+            <br/>
+            <br/>
+            <br/>
+
             <h3>Skills</h3>
 
             <ul id="otherSkills">
                 <li>Debugging</li>
                 <li>Cross-browser testing</li>
                 <li>Responsive designing</li>
-                <li>Version Control</li>    
+                <li>Version Control</li>
             </ul>
         </div>
     </section>
@@ -278,15 +108,15 @@
                 Starting Strength
                 <a href="#portfolioModal1" data-toggle="modal">
                     <span class="icon">
-                <img src="img/ss_ss.png" class="img-responsive">
+                        <img src="img/ss_ss.png" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 project">
                 Ebay Stats
-                    <a href="#portfolioModal2" data-toggle="modal">
-                        <span class="icon">
-                <img src="img/ebay_ss.png" class="img-responsive">
-                    </a>
+                <a href="#portfolioModal2" data-toggle="modal">
+                    <span class="icon">
+                        <img src="img/ebay_ss.png" class="img-responsive">
+                </a>
             </div>
         </div>
         <a href="http://www.github.com/chulahn">Github</a>
@@ -295,13 +125,13 @@
     <section id="photos">
         <div class="container">
             <h3>Gallery</h3>
-            <div class="col-xs-4">  
+            <div class="col-xs-4">
                 <img class="img-responsive" src="img/mountain.jpg">
             </div>
-            <div class="col-xs-4">  
+            <div class="col-xs-4">
                 <img class="img-responsive" src="img/boat.jpg">
             </div>
-            <div class="col-xs-4">  
+            <div class="col-xs-4">
                 <img class="img-responsive" src="img/lake.jpg">
             </div>
         </div>
@@ -330,10 +160,14 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Starting Strength Calculator</h2>                            
-                            <h4> <a href="http://chulahn.github.io/StartingStrength/">A basic warm-up calculator for Starting Strength</a></h4>
+                            <h2>Starting Strength Calculator</h2>
+                            <h4>
+                                <a href="http://chulahn.github.io/StartingStrength/">A basic warm-up calculator for Starting Strength</a>
+                            </h4>
 
-                            This is an application made for those following Rippetoe's Starting Strength weight lifting program.  The goal is to make sure the user is properly warmed up before doing working sets to minimize the chance of injury.  The app was designed to be minimal so it loads fast in the gym.
+                            This is an application made for those following Rippetoe's Starting Strength weight lifting program. The goal is to make
+                            sure the user is properly warmed up before doing working sets to minimize the chance of injury.
+                            The app was designed to be minimal so it loads fast in the gym.
 
                             <h3>Features</h3>
                             <ul>
@@ -345,14 +179,17 @@
 
                             <h3>Built With</h3>
                             <ul>
-                              <li>JQuery</li>
-                              <li>JQueryUI</li>
-                              <li>JQueryMobile</li>
+                                <li>JQuery</li>
+                                <li>JQueryUI</li>
+                                <li>JQueryMobile</li>
                             </ul>
 
-                            Made : Nov 2014<br/>
-                            Github : <a href="https://github.com/chulahn/StartingStrength">Basic Starting Strength Calc</a><br/><br>
-                            
+                            Made : Nov 2014
+                            <br/> Github :
+                            <a href="https://github.com/chulahn/StartingStrength">Basic Starting Strength Calc</a>
+                            <br/>
+                            <br>
+
                             <div class="text-right">
                                 <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
                             </div>
@@ -362,7 +199,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -376,10 +213,13 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>EBay Price Trend Visualizer</h2>                            
-                            <h4><a href="http://ebay-averagulizer.herokuapp.com/">A tool view price trends on eBay</a></h4>
+                            <h2>EBay Price Trend Visualizer</h2>
+                            <h4>
+                                <a href="http://ebay-averagulizer.herokuapp.com/">A tool view price trends on eBay</a>
+                            </h4>
 
-                            This is an application made to display price and how it changes over a period of time.  It also gives basic statistics such as max , min, and average prices.
+                            This is an application made to display price and how it changes over a period of time. It also gives basic statistics such
+                            as max , min, and average prices.
 
                             <h3>Features</h3>
                             <ul>
@@ -396,16 +236,19 @@
 
                             <h3>Built With</h3>
                             <ul>
-                              <li>JQuery</li>
-                              <li>NodeJS</li>
-                              <li>AngularJS</li>
-                              <li>D3.js</li>
+                                <li>JQuery</li>
+                                <li>NodeJS</li>
+                                <li>AngularJS</li>
+                                <li>D3.js</li>
                             </ul>
 
-                            Made : Mar 2015<br/>
-                            Github : <a href="https://github.com/chulahn/angular-ebaySearcher">Ebay Averagulizer</a><br/><br/>
-                            
-                            <div class="text-right">                   
+                            Made : Mar 2015
+                            <br/> Github :
+                            <a href="https://github.com/chulahn/angular-ebaySearcher">Ebay Averagulizer</a>
+                            <br/>
+                            <br/>
+
+                            <div class="text-right">
                                 <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
                             </div>
                         </div>
@@ -416,7 +259,7 @@
     </div>
 
     <!-- Modal Section End -->
-    
+
 </body>
 
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -424,11 +267,11 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         console.log('ready');
-        $(".col-xs-8 img").on("error", function() { console.log("error");$(this).attr("src", "img/mountain.jpg") })
+        $(".col-xs-8 img").on("error", function () { console.log("error"); $(this).attr("src", "img/mountain.jpg") })
 
     })
-        </script>
+</script>
 
 </html>
