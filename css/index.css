@@ -1,10 +1,3 @@
-#addTransactionContainer {
-  position: fixed;
-  background: #0891ec;
-  bottom: 0px;
-  width: 100%;
-}
-
 #intro {
   text-align: center;
   background-color: rebeccapurple;
@@ -45,6 +38,32 @@
   color: white;
   padding: 50px;
   min-height: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#about #interests-left {
+  display: inline-block;
+}
+
+@media all and (min-width: 375px) and (max-width: 768px) {
+  #about #interests-mid li ul {
+    padding-inline-start: 15px;
+  }
+
+  #about #interests-right li ul {
+    padding-inline-start: 15px;
+  }
+}
+
+#about ul li {
+  text-align: left;
+}
+
+#more-games {
+  display: none;
 }
 
 #skills {

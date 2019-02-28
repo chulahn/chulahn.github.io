@@ -20,52 +20,65 @@
         </div>
     </section>
 
-    <section id="about">
-        This is my personal website. You can check out my past projects and photos.
-
-        <h1>Interests</h1>
-
-        <ul>
-            <li>Coding</li>
-            <li>Optimization</li>
-            <li>Entrepreneurship</li>
-            <li>IoT</li>
-            <li>Machine Learning / Neural Networks</li>
-            <li>Fashion</li>
-            <li>Sneakers</li>
-            <li>Basketball</li>
-            <li>Visualization</li>
-            <li>Art</li>
-            <li>Fitness / Wellness</li>
-            <li>Basketball</li>
-            <li>
-                Music
-                <ul>
-                    <li>Hip-Hop</li>
-                    <li>Instrumentals</li>
-                    <li>Kali Uchis</li>
-                    <li>Jazz</li>
-                    <li>Improvised / Freestyle</li>
+    <section id="about">        
+        <h1 style="margin-bottom: 30px">Interests</h1>
+        
+        <div class="row">
+            <div class="col-xs-4 col-lg-6">
+                <ul id="interests-left">
+                    <li>Coding</li>
+                    <li>Optimization</li>
+                    <li>Entrepreneurship</li>
+                    <li>IoT</li>
+                    <li>Machine Learning / Neural Networks</li>
+                    <li>Fashion</li>
+                    <li>Sneakers</li>
+                    <li>Basketball</li>
+                    <li>Visualization</li>
+                    <li>Art</li>
+                    <li>Fitness / Wellness</li>
+                    <li>Basketball</li>
+                </ul>    
+            </div>
+            <div class="col-xs-4 col-lg-3">
+                <ul id="interests-mid">
+                    <li>
+                        Music
+                        <ul>
+                            <li>Hip-Hop</li>
+                            <li>Instrumentals</li>
+                            <li>Kali Uchis</li>
+                            <li>Jazz</li>
+                            <li>Improvised / Freestyle</li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-            <li>Games
-                <ul>
-                    <li>Final Fantasy 7</li>
-                    <li>Resident Evil 4</li>
-                    <li>Metal Gear Solid 2</li>
-                    <li>Kingdom Hearts</li>
-                    <li>Final Fantasy X</li>
-                    <li>Final Fantasy Tactics</li>
-                    <li>Final Fantasy Tactics Advance</li>
-                    <li>Heroes of the Storm</li>
-                    <li>Starcraft 2</li>
-                    <li>Diablo Series</li>
-                    <li>Mario Kart</li>
-                    <li>Jump Ultimate</li>
+            </div>
+            <div class="col-xs-4 col-lg-3">
+                <ul id="interests-right">
+                    <li>
+                        Games
+                        <ul>
+                            <li>Final Fantasy 7</li>
+                            <li>Resident Evil 4</li>
+                            <li>Metal Gear Solid 2</li>
+                            <li>Kingdom Hearts</li>
+                            <li>Final Fantasy X</li>
+                            <li id="more-games-toggle">More [ + ]</li>
+                            <span id="more-games">
+                                <li>Final Fantasy Tactics</li>
+                                <li>Final Fantasy Tactics Advance</li>
+                                <li>Heroes of the Storm</li>
+                                <li>Starcraft 2</li>
+                                <li>Diablo Series</li>
+                                <li>Mario Kart</li>
+                                <li>Jump Ultimate</li>
+                            </span>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-
+            </div>
+        </div>
     </section>
 
     <section id="skills">
@@ -599,6 +612,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jq.js"></script>
 <script>
     $(document).ready(function () {
         console.log('ready');
