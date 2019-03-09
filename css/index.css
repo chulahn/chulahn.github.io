@@ -67,10 +67,12 @@
   }
   #about #interests-mid li ul {
     padding-inline-start: 15px;
+    -webkit-padding-start: 15px;
   }
 
   #about #interests-right li ul {
     padding-inline-start: 15px;
+    -webkit-padding-start: 15px;
   }
 }
 
