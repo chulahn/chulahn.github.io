@@ -30,7 +30,7 @@
   #photos {
     background-size: cover !important;
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position-x: center !important;
   }
 
   #nametag {
