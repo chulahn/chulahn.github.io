@@ -65,8 +65,8 @@
   #general,
   #music,
   #games {
-    padding-inline-start: 5px;
-    -webkit-padding-start: 5px;
+    padding-inline-start: 0px;
+    -webkit-padding-start: 0px;
   }
 
   #about #interests-mid li ul {
