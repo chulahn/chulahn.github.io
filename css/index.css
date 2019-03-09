@@ -15,7 +15,7 @@
   }
 }
 
-@media all and (min-width: 375px) and (max-width: 768px) {
+@media all and (min-width: 350px) and (max-width: 768px) {
   #intro {
     height: 100vh;
     background-size: cover !important;
@@ -58,7 +58,7 @@
   display: inline-block;
 }
 
-@media all and (min-width: 375px) and (max-width: 768px) {
+@media all and (min-width: 350px) and (max-width: 768px) {
   #about #interests-mid li ul {
     padding-inline-start: 15px;
   }
