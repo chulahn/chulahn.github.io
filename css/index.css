@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: inherit;
   height: 500px;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 @media all and (max-width: 1024px) {
@@ -19,6 +19,7 @@
   #intro {
     height: 100vh;
     background-size: cover !important;
+    background-repeat: no-repeat;
   }
 
   #nametag {
