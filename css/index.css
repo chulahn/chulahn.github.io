@@ -20,6 +20,11 @@
     height: 100vh;
   }
 
+  #skills {
+    color: green;
+    min-height: 30vh;
+  }
+
   #intro,
   #skills,
   #photos {
