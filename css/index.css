@@ -69,6 +69,13 @@
     -webkit-padding-start: 0px;
   }
 
+  #interests-left,
+  #interests-mid,
+  #interests-right {
+    padding-inline-start: 25px;
+    -webkit-padding-start: 25px;
+  }
+
   #about #interests-mid li ul {
     padding-inline-start: 15px;
     -webkit-padding-start: 15px;
