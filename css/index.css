@@ -5,7 +5,7 @@
   background-image: url(../img/boat.jpg);
   background-size: cover;
   background-position: inherit;
-  height: 500px;
+  height: 100vh;
   /* background-attachment: fixed; */
 }
 
