@@ -16,7 +16,9 @@
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
-  #intro {
+  #intro,
+  #skills,
+  #photos {
     height: 100vh;
     background-size: cover !important;
     background-repeat: no-repeat;
