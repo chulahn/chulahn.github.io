@@ -161,6 +161,14 @@
   z-index: 2;
 }
 
+/* for mobile up to portrait */
+@media all and (min-width: 320px) and (max-width: 670px) {
+  #skills img,
+  #skills .icon {
+    height: 75px;
+  }
+}
+
 #skills .icon img:hover {
   opacity: 0;
 }
@@ -222,6 +230,10 @@
 #projects .project img.img-responsive {
   max-height: 260px;
   display: inline-block;
+}
+
+#projects #currentDisplayedProject img.img-responsive {
+  max-height: 500px;
 }
 
 @media all and (max-width: 1024px) {
