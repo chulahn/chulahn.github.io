@@ -133,6 +133,10 @@
   /* background-attachment: fixed; */
 }
 
+#skills h2 {
+  font-size: 36px;
+}
+
 #skills img {
   height: 100px;
 }
@@ -184,6 +188,10 @@
 #skills .icon:hover span.icon-text {
   opacity: 1;
   visibility: visible;
+}
+
+#skills #otherSkills {
+  font-size: 18px;
 }
 
 #known {
