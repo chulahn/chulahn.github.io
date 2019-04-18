@@ -20,6 +20,13 @@
     height: 100vh;
   }
 
+  #intro #news {
+    position: relative;
+    top: 20vh !important;
+    left: 0vw !important;
+    display: inline-block;
+  }
+
   #skills {
     color: red;
     min-height: 100vh;
@@ -55,12 +62,32 @@
   #photo {
     background-attachment: fixed;
   }
+
+  #intro #news {
+    position: relative;
+    top: -20vh !important;
+    left: 40vw !important;
+    display: inline-block;
+  }
 }
 
 @media all and (max-width: 420px) {
   #intro .container {
     width: 50%;
   }
+}
+
+#intro #news a {
+  color: white;
+}
+
+#intro #news a:hover {
+  color: blue;
+}
+
+#intro #mixtapeCover {
+  height: 30vh;
+  border-radius: 10px;
 }
 
 #about {
