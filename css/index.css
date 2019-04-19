@@ -85,7 +85,8 @@
   color: blue;
 }
 
-#intro #mixtapeCover {
+#intro #mixtapeCover,
+#intro #paypalQR {
   height: 30vh;
   border-radius: 10px;
 }
