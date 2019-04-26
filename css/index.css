@@ -9,6 +9,22 @@
   /* background-attachment: fixed; */
 }
 
+.link {
+  color: rebeccapurple;
+}
+.link:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+.link h1,
+.link h2 {
+  opacity: 0.6;
+}
+.link h1:hover,
+.link h2:hover {
+  opacity: 1;
+}
+
 @media all and (max-width: 1024px) {
   #intro {
     /* background-position: top; */
@@ -18,6 +34,12 @@
 @media all and (min-width: 320px) and (max-width: 768px) {
   #intro {
     height: 100vh;
+  }
+
+  .link h1,
+  .link h2 {
+    opacity: 0.8;
+    text-decoration: underline;
   }
 
   #intro #news {
