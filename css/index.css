@@ -27,6 +27,33 @@
     display: inline-block;
   }
 
+  #intro #news #paypalInfo {
+    position: absolute;
+    bottom: 50vh;
+    left: 30vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #intro #news #paypalQR {
+    height: inherit;
+    width: 10vw;
+    order: 1;
+  }
+
+  /* 
+  #intro #news #paypalQR:hover {
+    position: relative;
+    height: inherit;
+    top: 20vh;
+    right: 20vw;
+    width: 40vw;
+    order: 1;
+  }
+   */
+  #intro #news #donateText {
+    order: 2;
+  }
+
   #skills {
     color: red;
     min-height: 100vh;
