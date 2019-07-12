@@ -165,7 +165,7 @@
 #about {
   text-align: center;
   background-color: gray;
-  background-color: rgba(80, 80, 80, 0.3);
+  background-color: rgba(30, 65, 93, 1);
   color: white;
   padding: 50px;
   min-height: 150px;
@@ -175,33 +175,28 @@
   padding-right: 0px;
 }
 
-#about #interests-left {
-  display: inline-block;
-}
-
 @media all and (min-width: 320px) and (max-width: 768px) {
-  #general,
-  #music,
-  #games {
-    padding-inline-start: 0px;
-    -webkit-padding-start: 0px;
-  }
-
-  #interests-left,
-  #interests-mid,
-  #interests-right {
+  #int-left ul,
+  #int-mid ul,
+  #int-right ul,
+  #music ul,
+  #music ul {
     padding-inline-start: 25px;
     -webkit-padding-start: 25px;
   }
 
-  #about #interests-mid li ul {
+  #music ul li ul {
     padding-inline-start: 15px;
     -webkit-padding-start: 15px;
   }
 
-  #about #interests-right li ul {
+  #music ul li ul {
     padding-inline-start: 15px;
     -webkit-padding-start: 15px;
+  }
+
+  #interestsBullets h3 {
+    margin-top: 10px;
   }
 }
 
