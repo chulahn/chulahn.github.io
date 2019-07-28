@@ -198,6 +198,10 @@
   #interestsBullets h3 {
     margin-top: 10px;
   }
+
+  #otherProjects .project {
+    min-height: 107.5px;
+  }
 }
 
 #about ul li {
@@ -209,7 +213,13 @@
     width: 40% !important;
     left: 30% !important;
   }
+
+  #interests {
+    padding-bottom: 15px;
+  }
+  
 }
+
 
 #more-games {
   display: none;
@@ -315,7 +325,7 @@
 
 #projects {
   text-align: center;
-  background-color: gray;
+  background-color: #3b78a9;
   color: white;
   padding-bottom: 20px;
 }
@@ -345,6 +355,7 @@
 
 #projects .project {
   border: 1px solid black;
+  border-radius: 20px;
   padding-bottom: 10px;
   font-size: 16px;
 }
@@ -427,6 +438,7 @@ footer {
   top: 25px;
   right: 25px;
   position: absolute;
+  z-index: 2;
 }
 
 .close-modal:hover {
