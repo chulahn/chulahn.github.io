@@ -100,7 +100,6 @@
 
   #skills {
     color: red;
-    min-height: 100vh;
   }
 
   #intro,
@@ -217,7 +216,6 @@
   #interests {
     padding-bottom: 15px;
   }
-  
 }
 
 #interests {
@@ -232,9 +230,9 @@
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #74b313;
+  background-color: #a8bac8;
   color: white;
-  background-image: url(../img/lake.jpg);
+  /* background-image: url(../img/lake.jpg); */
   background-size: cover;
   background-position: center;
   /*height: 350px;*/
@@ -277,7 +275,7 @@
 @media all and (min-width: 320px) and (max-width: 670px) {
   #skills img,
   #skills .icon {
-    height: 75px;
+    height: 40px;
   }
 }
 
