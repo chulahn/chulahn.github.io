@@ -254,8 +254,6 @@
 
 @media all and (min-width: 768px) {
   #languages {
-    width: 75%;
-    left: 12.5%;
     position: relative;
   }
 
