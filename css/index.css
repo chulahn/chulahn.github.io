@@ -418,10 +418,10 @@ body {
 }
 
 .stack li {
-  display: inline;
+  display: inline-block;
   border: 1px solid white;
   padding: 5px 5px;
-  /* margin: 0 1vw; */
+  margin: 0.5vh 1vw;
 }
 
 #otherProjects img {
