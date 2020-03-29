@@ -352,26 +352,47 @@ body {
   margin-bottom: 15px;
 }
 
-#displayedProjectName {
+.projectName {
   display: block;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.project-holder {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 768px) {
-  #currentDisplayedProject {
-    flex-direction: column;
+  #currentDisplayedProject,
+  .project2 {
+    flex-direction: column !important;
     height: auto;
     min-height: 0;
     max-height: 5000px;
   }
 }
 
-#currentDisplayedProject {
+.project2 {
   display: flex;
   border: 3px solid black;
+  width: 100%;
+  min-height: 300px;
+  margin-bottom: 3em;
 }
 
-#currentDisplayedProject > a > .img {
+.project2.left {
+  flex-direction: row;
+}
+
+.project2.right {
+  flex-direction: row-reverse;
+}
+
+.project2 > a > .img {
   width: 100%;
   height: 100%;
   position: relative;
@@ -380,13 +401,13 @@ body {
   align-items: center;
 }
 
-#currentDisplayedProject > a > .img > img {
+.project2 > a > .img > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#currentDisplayedProject > .description {
+.project2 > .description {
   text-align: left;
   padding: 2vh 2vw;
 }
