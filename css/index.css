@@ -211,10 +211,19 @@ body {
   text-align: left;
 }
 
+@media all and (max-width: 768px) {
+  #interests > section {
+    width: 70% !important;
+    left: 15% !important;
+    text-align: left;
+  }
+}
+
 @media all and (min-width: 768px) {
   #interests > section {
-    width: 40% !important;
-    left: 30% !important;
+    width: 60% !important;
+    left: 20% !important;
+    text-align: left;
   }
 
   #interests {
