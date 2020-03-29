@@ -414,13 +414,14 @@ body {
 
 .stack {
   list-style-type: circle;
+  padding-inline-start: 10px;
 }
 
 .stack li {
   display: inline;
   border: 1px solid white;
   padding: 5px 5px;
-  margin: 0 1vw;
+  /* margin: 0 1vw; */
 }
 
 #otherProjects img {
