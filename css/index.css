@@ -382,6 +382,7 @@ body {
   width: 100%;
   min-height: 300px;
   margin-bottom: 3em;
+  align-items: center;
 }
 
 .project2.left {
