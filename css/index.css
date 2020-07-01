@@ -361,7 +361,7 @@ body {
 .project-holder {
   width: 100%;
   height: auto;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   display: flex;
   flex-direction: column;
 }
