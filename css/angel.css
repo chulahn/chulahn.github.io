@@ -28,9 +28,8 @@ body {
 
 #intro {
   text-align: center;
-  background-color: 59168f;
+  background-color: #59168f;
   color: white;
-  background-image: url(../img/boat.jpg);
   background-size: cover;
   background-position: inherit;
   height: 100vh;
@@ -129,6 +128,24 @@ body {
   top: 100px;
   padding-bottom: 10px;
 }
+#order input, #order select {
+    color: black;
+}
+
+#order {
+    width: 70% !important;
+    top: 18vh !important;
+    min-height: 25%;
+    padding-top: 10px;
+}
+
+#order label {
+    margin-top: 6px;
+}
+#ship{
+    font-weight: 400 !important ;
+}
+
 
 @media all and (min-width: 1024px) {
   #intro,
