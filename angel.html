@@ -10,38 +10,7 @@
   <link href="css/angel.css" rel="stylesheet">
 
   <script>
-
-        const data = JSON.stringify({
-            "collection": "customers",
-            "database": "angel",
-            "dataSource": "angel",
-            "document": {
-                // Your document data here
-                "field1": "value1",
-                "field2": "value2",
-                // Add more fields as needed
-            }
-        });
-
-        const config = {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Access-Control-Request-Headers': '*',
-                'api-key': 'FcYixg7VKf51NbmvXckUGBFu69VACf8Jm8nqyM9RNwnsvMh9MMspqe8PiI5H46BR',
-            },
-            body: data
-        };
-
-        fetch('https://us-east-1.aws.data.mongodb-api.com/app/data-vdyrprg/endpoint/data/v1/action/insertOne', config)
-            .then(response => response.json())
-            .then(data => {
-                console.log(JSON.stringify(data));
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+    
   </script>
 </head>
 
@@ -54,14 +23,13 @@
 
       <div class="container" id="order">
 
-        <form>
+        <form method="post" onsubmit="return call_locker();">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name"/>
+            <input type="text" id="name" name="name" required/>
             <br/>
-
             <label for="size">Size: (Mens)</label>
 
-            <select name="size" id="size">
+            <select name="size" id="size" required>
                 <option value="small">Small</option>
                 <option value="med">Medium</option>
                 <option value="large">Large</option>
@@ -72,7 +40,7 @@
             <br/>
 
             <label for="emailAddress">Email: </label>
-            <input name="emailAddress" id="emailAddress" type="email"  />
+            <input name="emailAddress" id="emailAddress" type="email" required />
             <br/>
 
             <label for="phone">Phone:
@@ -82,11 +50,15 @@
             <br/>
 
             <label for="ship">Shipping:
-            <select name="ship" id="ship">
+            <select name="ship" id="ship" required>
                 <option value="pickup">Pick-up (Philadelphia Only)</option>
                 <option value="ship">Ship (US Only)</option>
             </select>
             <br/>
+
+            <button id="submit">
+                Submit
+            </button>
 
         </form>
       </div>
@@ -564,10 +536,41 @@
   <script src="js/jq.js">
   </script>
   <script>
+
+    call_locker = () => { 
+        event.preventDefault();
+         newCustomer = {};
+        newCustomer.name = $("#name").val();
+        newCustomer.size = $("#size").val();
+        newCustomer.email = $("#emailAddress").val();
+        newCustomer.phone = $("#phone").val();
+        newCustomer.ship = $("#ship").val();
+
+        const config = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newCustomer)
+        };
+
+        // Fetch request to the /insert endpoint
+        fetch('https://angelrdna-0e0b60046bc9.herokuapp.com/', config)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Document inserted:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+        alert("RSVP placed " + newCustomer.name)
+        return newCustomer; 
+    }
+
     $(document).ready(function () {
       console.log('ready');
       $(".col-xs-8 img").on("error", function () { console.log("error"); $(this).attr("src", "img/mountain.jpg") })
-
     })
   </script>
 </body>

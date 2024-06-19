@@ -128,8 +128,12 @@ body {
   top: 100px;
   padding-bottom: 10px;
 }
-#order input, #order select {
+#order input, #order select, #order button {
     color: black;
+}
+
+#order button {
+    margin-top: 12px;
 }
 
 #order {
