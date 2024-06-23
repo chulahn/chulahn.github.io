@@ -537,7 +537,7 @@
   </script>
   <script>
 
-    call_locker = () => { 
+    call_locker = async () => { 
         event.preventDefault();
         var newCustomer = {};
         newCustomer.name = $("#name").val();
@@ -556,22 +556,23 @@
             body: JSON.stringify(newCustomer)
         };
 
-        // Fetch request to the /insert endpoint
-        fetch('https://angelrdna-0e0b60046bc9.herokuapp.com/rsvp', config)
-            .then(response => response.json())
-            .then(response => {
-              if (!response.ok) {
+        try {
+
+            // Fetch request to the /insert endpoint
+            const response = await fetch('https://angelrdna-0e0b60046bc9.herokuapp.com/rsvp', config)
+            
+            if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
-              }
-              return response.json();
-            })
-            .then(data => {
-                console.log('Document inserted:', data);
-                alert("RSVP placed " + newCustomer.name)
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+            }
+
+            const data = await response.json();
+            console.log('Document inserted:', data);
+            alert("RSVP placed " + newCustomer.name);
+
+        }
+        catch (error) {
+          console.error("Error: ", error)
+        }
 
         return newCustomer; 
     }
