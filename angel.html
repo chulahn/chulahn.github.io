@@ -539,12 +539,14 @@
 
     call_locker = () => { 
         event.preventDefault();
-         newCustomer = {};
+        var newCustomer = {};
         newCustomer.name = $("#name").val();
         newCustomer.size = $("#size").val();
         newCustomer.email = $("#emailAddress").val();
         newCustomer.phone = $("#phone").val();
         newCustomer.ship = $("#ship").val();
+
+        console.log("call_locker ", newCustomer)
 
         const config = {
             method: 'POST',
@@ -557,14 +559,20 @@
         // Fetch request to the /insert endpoint
         fetch('https://angelrdna-0e0b60046bc9.herokuapp.com/rsvp', config)
             .then(response => response.json())
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+              }
+              return response.json();
+            })
             .then(data => {
                 console.log('Document inserted:', data);
+                alert("RSVP placed " + newCustomer.name)
             })
             .catch(error => {
                 console.error('Error:', error);
             });
 
-        alert("RSVP placed " + newCustomer.name)
         return newCustomer; 
     }
 
