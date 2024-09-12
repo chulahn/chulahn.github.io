@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chul Ahn's - FLEVORFUL Player Card</title>
+    <style>
+        #pictureContainer {
+            border: 5px solid green;
+            min-height: 500px;
+            display: flex;
+        }
+
+        #picDiv, #statsDiv {
+            flex: 1;
+        }
+        #picDiv {
+            color: green;
+        }
+        #profileInfo {
+            padding-left: 10px;
+        }
+        #picDiv img {
+            max-width:100%;
+        }
+        #picDiv h2 {
+            margin-top: 0px;
+        }
+
+        #statsDiv {
+            background-color: green;
+            color:white;
+            width: 50%;
+        }
+
+        #statsDiv h1 {
+            text-align: center;
+        }
+
+        #statsDiv table {
+            width: 100%;
+        }
+
+        #statsDiv table {
+            text-align: center;
+        }
+
+        #cols th {
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+        }
+
+        #statsDiv table tr>td {
+            border-bottom: 1px dotted white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <div id="pictureContainer">
+            <div id="picDiv">
+                <img src="./propic.jpg">
+                <div id="profileInfo">
+                    <h2>Chul Ahn</h2>
+                </div>
+
+            </div>
+            <div id="statsDiv">
+                <h1>Stats</h1>
+                <table>
+                    <tr id="cols">
+                        <th id="date">Date</th>
+                        <th>Result</th>
+                        <th id="score">Score</th>
+                    </tr>
+                    <tr>
+                        <td>9/11/24</td>
+                        <td>Win</td>
+                        <td>8 - 4</td>
+                    </tr>
+                    
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', async () => {
+            
+        });
+    </script>
+
+</body>
+</html>
