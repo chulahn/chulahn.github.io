@@ -3,575 +3,302 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
-  <title>Chul Ahn</title>
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Chulahn is a creative technologist, skater, and artist working across software, design, culture, and self-improvement.">
+  <title>chulahn.com</title>
   <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="wrap">
-    <section id="intro">
-      <div class="container" id="nametag">
-        <img class="img-responsive" src="img/austin.jpg">
-        <!-- <h2>Chul Ahn</h2>
-                <h4>Digital Creative</h4>
-                <h5>Student of the World</h5> -->
-      </div>
-      <!-- 
-            <div id="news">
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Chulahn home">CA</a>
+    <nav>
+      <a class="nav-link" href="#work">
+        <span>Work</span>
+        <svg class="nav-skate" viewBox="0 0 120 24" aria-hidden="true" focusable="false">
+          <path d="M14 15c10 0 82 0 92 0" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="28" cy="18" r="3.3" fill="currentColor"/>
+          <circle cx="92" cy="18" r="3.3" fill="currentColor"/>
+          <path d="M54 9c7 0 12-5 14-5 3 0 7 4 7 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a class="nav-link" href="#motifs">
+        <span>Motifs</span>
+        <svg class="nav-skate" viewBox="0 0 120 24" aria-hidden="true" focusable="false">
+          <path d="M14 15c10 0 82 0 92 0" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="28" cy="18" r="3.3" fill="currentColor"/>
+          <circle cx="92" cy="18" r="3.3" fill="currentColor"/>
+          <path d="M54 9c7 0 12-5 14-5 3 0 7 4 7 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a class="nav-link" href="#contact">
+        <span>Contact</span>
+        <svg class="nav-skate" viewBox="0 0 120 24" aria-hidden="true" focusable="false">
+          <path d="M14 15c10 0 82 0 92 0" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="28" cy="18" r="3.3" fill="currentColor"/>
+          <circle cx="92" cy="18" r="3.3" fill="currentColor"/>
+          <path d="M54 9c7 0 12-5 14-5 3 0 7 4 7 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
 
-                <a href="https://soundcloud.com/chulahn215/sets/chuls-demo">
-                    <span class="link"><h1>New MIXTAPE</h1></span>
-                    <img id="mixtapeCover" src="img/chul-demo.png">
-                </a>
-
-                <section id="paypalInfo">
-                    <a href="http://paypal.me/chulahn">
-                        <div id="donateText">
-                            <span class="link"><h2>Donate</h2></span>
-                            <h5>I need an iPhone X (I have a 6S LOL🤣)</h5>
-                        </div>
-                        
-                        <img id="paypalQR" src="img/paypal.png">
-                    </a>
-                </section>
-            </div>
-       -->
-      <nav>
-        <ul>
-          <li>
-            <a href="#about">About Me</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Portfolio</a>
-          </li>
-          <li>
-            <a href="#art">Art</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-    <section id="about">
-      <h1 style="margin-bottom: 30px; font-weight:bold">About Me</h1>
-      <div class="container-fluid">
-        <div class="row" id="interests">
-          <section class="col-xs-12 col-lg-12" id="general">
-            I'm a software developer in Philadelphia that is interested in bringing tech to the intellectuals and
-            creatives of the world. I believe as human beings, we must embrace the characteristics that truly make us
-            unique, so that we may learn from each other and grow. My goal is implement tech-solutions for people, so
-            they can have more time to focus on their passion.
-            <!-- canvas? -->
-          </section>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow hero-strap">Creative technologist / skater / artist</p>
+        <h1 class="tag-logo" id="hero-title" data-text="Chul Ahn">
+          <span>Chul</span>
+          <span>Ahn</span>
+        </h1>
+        <p class="hero-copy">
+          Creating software, art, content through my navigation of cultures
+        </p>
+        <div class="hero-actions" aria-label="Featured actions">
+          <a class="button primary" href="#work">View work</a>
+          <a class="button secondary" href="https://github.com/chulahn">GitHub</a>
         </div>
       </div>
+      <aside class="hero-panel" aria-label="Profile details">
+        <img src="img/me-small.jpg" alt="Portrait of Chulahn">
+        <p class="card-stamp">Player 01</p>
+        <dl>
+          <div>
+            <dt>Handle</dt>
+            <dd>Chul Ahn</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Code, skate, art</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Self-Improvement, Design, Culture</dd>
+          </div>
+        </dl>
+      </aside>
     </section>
-    <section id="skills">
-      <div class="container">
-        <h2 style="font-weight:bold">Languages / Frameworks Known</h2>
-        <section id="languages">
-          <span class="icon"><img src="img/html-icon.png"> <span class="icon-text">HTML5</span></span> <span
-            class="icon"><img src="img/css-icon.png"> <span class="icon-text">CSS3</span></span> <span class="icon"><img
-              src="img/javascript-icon.png"> <span class="icon-text">Javascript</span></span> <span class="icon"><img
-              src="img/jquery-icon.png"> <span class="icon-text">JQuery</span></span> <span class="icon"><img
-              src="img/nodejs-icon.svg"> <span class="icon-text">NodeJS</span></span> <span class="icon"><img
-              src="img/angular-icon.png"> <span class="icon-text">AngularJS</span></span> <span class="icon"><img
-              src="img/java-icon.png"> <span class="icon-text">Java</span></span> <span class="icon"><img
-              src="img/csharp-icon.png"> <span class="icon-text">C#</span></span> <span class="icon"><img
-              src="img/python-icon.png"> <span class="icon-text">Python</span></span> <span class="icon"><img
-              src="img/git-icon.png"> <span class="icon-text">Git</span></span> <span class="icon"><img
-              src="img/mongodb-icon.png"> <span class="icon-text">MongoDB</span></span> <span class="icon"><img
-              src="img/jqueryui-icon.png"> <span class="icon-text">JQueryUI</span></span> <span class="icon"><img
-              src="img/jquerymobile-icon.png"> <span class="icon-text">JQueryMobile</span></span> <span
-            class="icon"><img src="img/d3js-icon.png"> <span class="icon-text">D3.js</span></span>
-        </section>
-        <h2>Skills</h2>
-        <ul id="otherSkills">
-          <li>Software engineering</li>
-          <li>Web Development</li>
-          <li>Cross-browser testing</li>
-          <li>Responsive designing across multiple devices</li>
-          <li>Version Control</li>
-          <li>Cloud services</li>
-          <li>Pair Programming</li>
-          <li>Graphic Design</li>
-        </ul>
+
+    <section class="intro-section" id="about" aria-labelledby="about-title">
+      <div class="section-label">About</div>
+      <div class="section-copy">
+        <h2 id="about-title">Creating software, art, content through my navigation of cultures.</h2>
+        <p>
+          I’m Chul and as I journey through life, I’m taking my experience and transforming the impact it had on me
+          into software, design, and culture. My work blends coding, traveling, visual design, and problem solving on
+          a day to day basis to create a project that is unique to me.
+        </p>
+        <p>
+          chulahn.com is a home base for my projects, experiments, reflections, and creative direction.
+        </p>
       </div>
     </section>
-    <section id="projects">
-      <div class="container-fluid">
-        <div class="section">
-          <h2 style="font-weight:bold">Projects</h2><a href="http://github.com/chulahn"><img class="git-logo"
-              src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"></a>
-          <div class="project-holder">
-            <div class="project2 left" id="currentDisplayedProject">
-              <a data-toggle="modal" href="#portfolioModal1"><span class="icon"><span class="icon-text">Click for more
-                    details.</span></span>
-                <div class="img">
-                  <img class="img-responsive" src="img/ss_ss.png">
-                </div>
-              </a>
-              <div class="description">
-                <span class="projectName"><a href="http://chulahn.github.io/StartingStrength/">Starting
-                    Strength</a></span>
 
-                <h4>A basic warm-up calculator for Starting
-                  Strength
-                </h4>
-                This is an application made for those following Rippetoe's Starting Strength weight lifting
-                program. The goal is to make sure the user is properly warmed up before doing working sets to minimize
-                the chance of injury. The app was designed to be minimal so it loads fast in the gym.
-                <h3>Features</h3>
-                <ul>
-                  <li>Calculate Warm-up reps per Exercise</li>
-                  <li>Show Workout of the Day</li>
-                  <li>Rank your strength based on weight/gender</li>
-                  <li>Ability to add custom plates</li>
-                </ul>
-                <h3>Built With</h3>
-                <ul class="stack">
-                  <li>JQuery</li>
-                  <li>JQueryUI</li>
-                  <li>JQueryMobile</li>
-                </ul>
-                Github : <a href="https://github.com/chulahn/StartingStrength">Basic Starting Strength Calc</a>
-              </div>
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <h2 id="work-title">Software experiments from the archive, still part of the story.</h2>
+      </div>
 
+      <div class="project-grid">
+        <article class="project-card feature">
+          <a class="project-image" href="http://chulahn.github.io/StartingStrength/" aria-label="Open Starting Strength">
+            <img src="img/ss_ss.png" alt="Starting Strength calculator screenshot">
+          </a>
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Nov 2014</span>
+              <span>Movement tool</span>
             </div>
-
-            <div class="project2 right" id="currentDisplayedProject2">
-              <a data-toggle="modal" href="#portfolioModal2"><span class="icon"><span class="icon-text">Click for more
-                    details.</span></span>
-                <div class="img">
-                  <img class="img-responsive" src="img/ebay_ss.png">
-                </div>
-              </a>
-              <div class="description">
-                <a href="http://ebay-averagulizer.herokuapp.com/">
-                  <span class="projectName">EBay Price Trend Visualizer</span>
-                </a>
-                <h4>A tool view price trends on eBay</a></h4>This is
-                an
-                application made to display price and how it changes over a period of time. It also gives basic
-                statistics
-                such as max , min, and average prices.
-
-                <!-- <div class="row" style="padding-top: 10px">
-                  <div class="col-xs-6"><img class="img-responsive" src="img/ebay1.png"></div>
-                  <div class="col-xs-6"><img class="img-responsive" src="img/ebay2.png"></div>
-                </div>
-                <div class="row" style="padding-top: 10px">
-                  <div class="col-xs-6"><img class="img-responsive" src="img/ebay3.png"></div>
-                  <div class="col-xs-6"><img class="img-responsive" src="img/ebay4.png"></div>
-                </div> -->
-
-                <h3>Features</h3>
-                <ul>
-                  <li>Show average item price by day</li>
-                  <li>Ability to get statistics on user selected group of items</li>
-                  <li>Dynamic filter by
-                    <ul>
-                      <li>Name</li>
-                      <li>Date</li>
-                      <li>Price</li>
-                    </ul>
-                  </li>
-                </ul>
-                <h3>Built With</h3>
-                <ul class="stack">
-                  <li>JQuery</li>
-                  <li>NodeJS</li>
-                  <li>AngularJS</li>
-                  <li>D3.js</li>
-                </ul>
-                Github : <a href="https://github.com/chulahn/angular-ebaySearcher">Ebay Averagulizer</a>
-              </div>
-
+            <h3><a href="http://chulahn.github.io/StartingStrength/">Starting Strength</a></h3>
+            <p>
+              A minimal warm-up calculator for Rippetoe's Starting Strength program, built to load fast in the gym and
+              keep lifters focused before working sets.
+            </p>
+            <ul class="feature-list">
+              <li>Calculate warm-up reps per exercise</li>
+              <li>Show workout of the day</li>
+              <li>Rank strength by weight and gender</li>
+              <li>Add custom plates</li>
+            </ul>
+            <div class="stack" aria-label="Built with">
+              <span>JQuery</span>
+              <span>JQueryUI</span>
+              <span>JQueryMobile</span>
             </div>
+            <a class="text-link" href="https://github.com/chulahn/StartingStrength">Source</a>
+          </div>
+        </article>
 
-            <div class="project2 left" id="currentDisplayedProject3">
-              <a data-toggle="modal" href="#portfolioModal4"><span class="icon"><span class="icon-text">Click for more
-                    details.</span></span>
-                <div class="img">
-                  <img class="img-responsive" src="img/ex1.png">
-                </div>
-              </a>
-              <div class="description">
-                <span class="projectName"><a href="http://exercise-journal.herokuapp.com/">FitBook</a></span>
+        <article class="project-card feature">
+          <a class="project-image" href="http://ebay-averagulizer.herokuapp.com/" aria-label="Open eBay Price Trend Visualizer">
+            <img src="img/ebay_ss.png" alt="eBay price trend visualizer screenshot">
+          </a>
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Mar 2015</span>
+              <span>Market data</span>
+            </div>
+            <h3><a href="http://ebay-averagulizer.herokuapp.com/">eBay Price Trend Visualizer</a></h3>
+            <p>
+              A tool that visualizes eBay price movement over time and gives quick statistics like max, min, and average
+              prices across selected item groups.
+            </p>
+            <ul class="feature-list">
+              <li>Show average item price by day</li>
+              <li>Calculate stats for selected items</li>
+              <li>Filter dynamically by name, date, and price</li>
+            </ul>
+            <div class="stack" aria-label="Built with">
+              <span>JQuery</span>
+              <span>NodeJS</span>
+              <span>AngularJS</span>
+              <span>D3.js</span>
+            </div>
+            <a class="text-link" href="https://github.com/chulahn/angular-ebaySearcher">Source</a>
+          </div>
+        </article>
 
-                <h4>An Exercise Journal</h4>
-                This is a simple app that logs each exercise a user does
-                <!-- <div class="row" style="padding-top: 10px">
-                  <div class="col-xs-6"><img class="img-responsive" src="img/ex1.png"></div>
-                  <div class="col-xs-6"><img class="img-responsive" src="img/ex2.png"></div>
-                </div> -->
-                <h3>Features</h3>
-                <ul>
-                  <li>Log exercise, weight, and reps</li>
-                  <li>Display exercises for a day</li>
-                  <li>Off-line resync support</li>
-                </ul>
-                <h3>Built With</h3>
-                <ul class="stack">
-                  <li>Bootstrap</li>
-                  <li>NodeJS</li>
-                  <li>AngularJS</li>
-                  <li>MongoDB</li>
-                </ul>
-                Github : <a href="https://github.com/chulahn/Exercise-Journal">Exercise Journal</a>
-              </div>
+        <article class="project-card">
+          <a class="project-image" href="http://exercise-journal.herokuapp.com/" aria-label="Open FitBook">
+            <img src="img/ex1.png" alt="FitBook exercise journal screenshot">
+          </a>
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Jul 2018</span>
+              <span>Movement log</span>
+            </div>
+            <h3><a href="http://exercise-journal.herokuapp.com/">FitBook</a></h3>
+            <p>A simple exercise journal for logging movements, weights, reps, and daily sessions.</p>
+            <ul class="feature-list">
+              <li>Log exercise, weight, and reps</li>
+              <li>Display exercises for a day</li>
+              <li>Offline resync support</li>
+            </ul>
+            <div class="stack" aria-label="Built with">
+              <span>Bootstrap</span>
+              <span>NodeJS</span>
+              <span>AngularJS</span>
+              <span>MongoDB</span>
+            </div>
+            <a class="text-link" href="https://github.com/chulahn/Exercise-Journal">Source</a>
+          </div>
+        </article>
 
+        <article class="project-card">
+          <a class="project-image" href="http://transactionjournal.herokuapp.com/" aria-label="Open Transaction Journal">
+            <img src="img/taj1.png" alt="Transaction Journal screenshot">
+          </a>
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Aug 2018</span>
+              <span>Finance tracker</span>
+            </div>
+            <h3><a href="http://transactionjournal.herokuapp.com/">Transaction Journal</a></h3>
+            <p>A finance journal that logs transactions, summarizes spending, and organizes entries with tags.</p>
+            <ul class="feature-list">
+              <li>Show money spent in a month</li>
+              <li>Display average cost per transaction</li>
+              <li>Group transactions with tags</li>
+            </ul>
+            <div class="stack" aria-label="Built with">
+              <span>Bootstrap</span>
+              <span>NodeJS</span>
+              <span>AngularJS</span>
+              <span>MongoDB</span>
+            </div>
+            <a class="text-link" href="https://github.com/chulahn/TransActionJournal">Source</a>
+          </div>
+        </article>
+
+        <article class="project-card compact">
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Apr 2015</span>
+              <span>Multiplayer game</span>
+            </div>
+            <h3><a href="https://github.com/chulahn/TienLen/">TienLen</a></h3>
+            <p>A web app for playing the Vietnamese card game TienLen with rooms, real-time play, and anti-cheat measures.</p>
+            <div class="stack" aria-label="Built with">
+              <span>Bootstrap</span>
+              <span>JQuery</span>
+              <span>NodeJS</span>
+              <span>Socket.io</span>
             </div>
           </div>
+        </article>
 
-          <div class="row" id="otherProjects">
-
-            <div class="col-xs-4 project">
-              <span>TAJ</span> <a data-toggle="modal" href="#portfolioModal3"><span class="icon"><img
-                    class="img-responsive" src="img/taj1.png"> <span class="icon-text">Click for more
-                    details.</span></span></a>
+        <article class="project-card compact">
+          <div class="project-body">
+            <div class="project-meta">
+              <span>Jan 2015</span>
+              <span>Game data</span>
             </div>
-
-            <div class="col-xs-4 project">
-              <span>TienLen</span> <a data-toggle="modal" href="#portfolioModal5"><span class="icon"><img
-                    class="img-responsive" src="img/cake.png"> <span class="icon-text">Click for more
-                    details.</span></span></a>
+            <h3><a href="https://github.com/chulahn/Diablo-3-Leaderboard-Scraper">Diablo 3 Greater Rift Tool</a></h3>
+            <p>A leaderboard scraper showing what top Diablo 3 players were using for Greater Rifts.</p>
+            <div class="stack" aria-label="Built with">
+              <span>JQuery</span>
+              <span>NodeJS</span>
+              <span>MongoDB</span>
+              <span>D3.js</span>
             </div>
-            <div class="col-xs-4 project">
-              <span>Diablo Stats</span> <a data-toggle="modal" href="#portfolioModal6"><span class="icon"><img
-                    class="img-responsive" src="img/submarine.png"> <span class="icon-text">Click for more
-                    details.</span></span></a>
-            </div>
-            <div class="col-xs-4 project" id="moreProjects">
-              <span>More</span> <a data-toggle="modal" href="#portfolioModal7"><span class="icon"><img
-                    class="img-responsive" src="img/cabin.png"> <span class="icon-text">More Projects</span></span></a>
-            </div>
+            <a class="text-link" href="http://d3ind3.herokuapp.com/">Project link</a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
-    <section id="photos">
-      <div class="container">
-        <h3>Photography</h3>
-        <div class="col-xs-4"><img class="img-responsive" src="img/mountain.jpg"></div>
-        <div class="col-xs-4"><img class="img-responsive" src="img/boat.jpg"></div>
-        <div class="col-xs-4"><img class="img-responsive" src="img/lake.jpg"></div>
-      </div>
-    </section>
-    <section id="art">
-      <div class="container-fluid">
-        <h3>Graphic Design</h3>
-        <div class="section">
-          <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <a href="img/pro_fol_ia/vashv1_midSup.jpg"><img class="img-responsive"
-                    src="img/pro_fol_ia/vashv1_midSup.jpg" style="max-height: 230px"></a>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <a href="img/pro_fol_ia/Yamb6v004-pE.jpg"><img class="img-responsive center-block"
-                    src="img/pro_fol_ia/Yamb6v004-pE.jpg"></a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5">
-              <a href="img/pro_fol_ia/sAElFie_v000.jpg"><img class="img-responsive center-block"
-                  src="img/pro_fol_ia/sAElFie_v000.jpg" style="max-height: 230px"></a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-3 col-xs-4">
-              <a href="img/pro_fol_ia/vashpunch-dreamypurp.jpg"><img class="img-responsive center-block"
-                  src="img/pro_fol_ia/vashpunch-dreamypurp.jpg" style="max-height: 152.27px"></a>
-            </div>
-            <div class="col-lg-6 col-xs-4">
-              <div class="col-lg-6">
-                <a href="img/pro_fol_ia/tati-tommy.jpg"><img class="img-responsive" src="img/pro_fol_ia/tati-tommy.jpg"
-                    style="max-height: 152.27px"></a>
-              </div>
-              <div class="col-lg-6">
-                <a href="img/pro_fol_ia/ness-swag-port2_wBG-fix.jpg"><img class="img-responsive"
-                    src="img/pro_fol_ia/ness-swag-port2_wBG-fix.jpg" style="max-height: 152.27px"></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-xs-3">
-              <a href="img/pro_fol_ia/colorEm_v00.jpg"><img class="img-responsive" src="img/pro_fol_ia/colorEm_v00.jpg"
-                  style="max-height: 152.27px"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer id="footer">
-      <div class="container">
-        <h2>Location: Philadelphia, PA</h2>
-        <h3>Contact: ahn.chul@gmail.com</h3>
-        <h5>Copyright &copy; chulahn.github.io 2017</h5>
-      </div>
-    </footer>
-  </div><!-- Modal Section Start -->
-  <div class="modal fade" id="portfolioModal1" role="dialog" tabindex="-1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Starting Strength Calculator</h4>
-        </div>
-        <div class="modal-body">
-          <h4><a href="http://chulahn.github.io/StartingStrength/">A basic warm-up calculator for Starting Strength</a>
-          </h4>This is an application made for those following Rippetoe's Starting Strength weight lifting program. The
-          goal is to make sure the user is properly warmed up before doing working sets to minimize the chance of
-          injury. The app was designed to be minimal so it loads fast in the gym.
-          <div class="row" style="padding-top: 10px">
-            <div class="col-xs-3"><a href="img/ss1.png"><img class="img-responsive" src="img/ss1.png"></a></div>
-            <div class="col-xs-3"><a href="img/ss2.png"><img class="img-responsive" src="img/ss2.png"></a></div>
-            <div class="col-xs-3"><a href="img/ss3.png"><img class="img-responsive" src="img/ss3.png"></a></div>
-            <div class="col-xs-3"><a href="img/ss4.png"><img class="img-responsive" src="img/ss4.png"></a></div>
-          </div>
-          <h3>Features</h3>
-          <ul>
-            <li>Calculate Warm-up reps per Exercise</li>
-            <li>Show Workout of the Day</li>
-            <li>Rank your strength based on weight/gender</li>
-            <li>Ability to add custom plates</li>
-          </ul>
-          <h3>Built With</h3>
-          <ul>
-            <li>JQuery</li>
-            <li>JQueryUI</li>
-            <li>JQueryMobile</li>
-          </ul>Made : Nov 2014<br>
-          Github : <a href="https://github.com/chulahn/StartingStrength">Basic Starting Strength Calc</a>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-default btn-danger" data-dismiss="modal" type="button">Close</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-  <div aria-hidden="true" class="modal fade" id="portfolioModal2" role="dialog" tabindex="-1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">EBay App</h4>
-        </div>
-        <div class="modal-body">
-          <h2>EBay Price Trend Visualizer</h2>
-          <h4><a href="http://ebay-averagulizer.herokuapp.com/">A tool view price trends on eBay</a></h4>This is an
-          application made to display price and how it changes over a period of time. It also gives basic statistics
-          such as max , min, and average prices.
-          <div class="row" style="padding-top: 10px">
-            <div class="col-xs-3"><a href="img/ebay1.png"><img class="img-responsive" src="img/ebay1.png"></a></div>
-            <div class="col-xs-3"><a href="img/ebay2.png"><img class="img-responsive" src="img/ebay2.png"></a></div>
-            <div class="col-xs-3"><a href="img/ebay3.png"><img class="img-responsive" src="img/ebay3.png"></a></div>
-            <div class="col-xs-3"><a href="img/ebay4.png"><img class="img-responsive" src="img/ebay4.png"></a></div>
-          </div>
-          <h3>Features</h3>
-          <ul>
-            <li>Show average item price by day</li>
-            <li>Ability to get statistics on user selected group of items</li>
-            <li>Dynamic filter by
-              <ul>
-                <li>Name</li>
-                <li>Date</li>
-                <li>Price</li>
-              </ul>
-            </li>
-          </ul>
-          <h3>Built With</h3>
-          <ul>
-            <li>JQuery</li>
-            <li>NodeJS</li>
-            <li>AngularJS</li>
-            <li>D3.js</li>
-          </ul>Made : Mar 2015<br>
-          Github : <a href="https://github.com/chulahn/angular-ebaySearcher">Ebay Averagulizer</a>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-default btn-danger" data-dismiss="modal" type="button">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div aria-hidden="true" class="modal fade" id="portfolioModal3" role="dialog" tabindex="-1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Finance App</h4>
-        </div>
-        <div class="modal-body">
-          <h2>Transaction Journal</h2>
-          <h4><a href="http://transactionjournal.herokuapp.com/">A journal that tracks finances</a></h4>This is an
-          application made to log all of the transactions a user may have and then displays statistics.
-          <div class="row" style="padding-top: 10px">
-            <div class="col-xs-12"><a href="img/taj1.png"><img class="img-responsive" src="img/taj1.png"></a></div>
-          </div>
-          <h3>Features</h3>
-          <ul>
-            <li>Show money spent in a month</li>
-            <li>Display average cost per transaction</li>
-            <li>Group transactions with tags</li>
-          </ul>
-          <h3>Built With</h3>
-          <ul>
-            <li>Bootstrap</li>
-            <li>NodeJS</li>
-            <li>AngularJS</li>
-            <li>MongoDB</li>
-          </ul>Made : Aug 2018<br>
-          Github : <a href="https://github.com/chulahn/TransActionJournal">Transaction Journal</a><br>
-          <br>
-          <div class="modal-footer">
-            <button class="btn btn-default btn-danger" data-dismiss="modal" type="button">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div aria-hidden="true" class="modal fade" id="portfolioModal4" role="dialog" tabindex="-1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">FitBook</h4>
-        </div>
-        <div class="modal-body">
-          <h2>Exercise Journal</h2>
-          <h4><a href="http://exercise-journal.herokuapp.com/">An exercise journal</a></h4>This is a simple app that
-          logs each exercise a user does
-          <div class="row" style="padding-top: 10px">
-            <div class="col-xs-6"><a href="img/ex1.png"><img class="img-responsive" src="img/ex1.png"></a></div>
-            <div class="col-xs-6"><a href="img/ex2.png"><img class="img-responsive" src="img/ex2.png"></a></div>
-          </div>
-          <h3>Features</h3>
-          <ul>
-            <li>Log exercise, weight, and reps</li>
-            <li>Display exercises for a day</li>
-            <li>Off-line resync support</li>
-          </ul>
-          <h3>Built With</h3>
-          <ul>
-            <li>Bootstrap</li>
-            <li>NodeJS</li>
-            <li>AngularJS</li>
-            <li>MongoDB</li>
-          </ul>Made : Jul 2018<br>
-          Github : <a href="https://github.com/chulahn/Exercise-Journal">Exercise Journal</a>
-          <div class="modal-footer">
-            <button class="btn btn-default btn-danger" data-dismiss="modal" type="button">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div aria-hidden="true" class="modal fade" id="portfolioModal5" role="dialog" tabindex="-1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">TienLen</h4>
-        </div>
 
-        <div class="modal-body">
-          <h2>TienLen</h2>
-          <h4><a href="https://github.com/chulahn/TienLen/">TIEN LEN</a></h4>This is a web-app that allows users to
-          connect to the same game and play the Vietnamese card game TienLen.
-          <h3>Features</h3>
-          <ul>
-            <li>Real-time playing</li>
-            <li>Anti-Cheat measures</li>
-            <li>Room support</li>
-          </ul>
-          <h3>Built With</h3>
-          <ul>
-            <li>Bootstrap</li>
-            <li>JQuery</li>
-            <li>NodeJS</li>
-            <li>Socket.io</li>
-          </ul>Made : April 2015<br>
-          Github : <a href="https://github.com/chulahn/TienLen/">Tien Len</a><br>
-          <br>
-          <div class="modal-footer">
-            <button class="btn btn-default btn-danger" data-dismiss="modal" type="button">Close</button>
-          </div>
-        </div>
+    <section class="motif-section" id="motifs" aria-labelledby="motif-title">
+      <div class="section-heading">
+        <p class="eyebrow">Motifs</p>
+        <h2 id="motif-title">The deeper goal is turning ideas into motion.</h2>
       </div>
-    </div>
-  </div>
-  <div aria-hidden="true" class="modal fade" id="portfolioModal6" role="dialog" tabindex="-1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Diablo 3 Leaderboards</h4>
-        </div>
-        <div class="modal-body">
-          <h2>Diablo 3 Greater Rift Tool</h2>
-          <p><a href="https://github.com/chulahn/Diablo-3-Leaderboard-Scraper">A tool that shows what the top players in
-              Diablo are using for their Greater Rifts</a>.<br></p>
-          <h3>Built With</h3>
-          <ul>
-            <li>JQuery</li>
-            <li>NodeJS</li>
-            <li>MongoDB</li>
-            <li>D3.js
-              <p></p>
-            </li>
-          </ul>
-          Made: Jan 2015<br>
-          Link: <strong><a href="http://d3ind3.herokuapp.com/">D3 Leaderboard Scraper</a></strong>
-          <div class="modal-footer">
-            <button class="btn btn-default btn-danger" data-dismiss="modal" type="button">Close</button>
-          </div>
-        </div>
+      <div class="motif-grid">
+        <article>
+          <span>01</span>
+          <h3>Movement</h3>
+          <p>Skating, travel, and street exploration shape how I see space, culture, and the people moving through it.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Building</h3>
+          <p>Web apps, software demos, AI experiments, and tools are where curiosity becomes something people can use.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Culture</h3>
+          <p>Clothing, music, visual design, live content, and street references all feed the same creative direction.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Documentation</h3>
+          <p>The camera, stream, notes, and site keep the process visible: learning by moving and building by doing.</p>
+        </article>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Software, design, skating, travel, and culture — built from the ground up.</h2>
     </div>
-  </div>
-  <div aria-hidden="true" class="modal fade" id="portfolioModal7" role="dialog" tabindex="-1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">More Projects</h4>
-        </div>
-        <div class="modal-body">
-          <h2>My Github</h2>All my other projects
-          <h4><a href="https://www.github.com/chulahn">@chulahn</a></h4><br><br>
-          <div class="modal-footer">
-            <button class="btn btn-default btn-danger" data-dismiss="modal" type="button">Close</button>
-          </div>
-        </div>
-      </div>
+    <div class="footer-links">
+      <a href="mailto:ahn.chul@gmail.com">ahn.chul@gmail.com</a>
+      <a href="https://github.com/chulahn">github.com/chulahn</a>
     </div>
-  </div>
-  <!-- Modal Section End -->
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-  <script src="js/jquery-3.2.1.min.js">
-  </script>
-  <script src="js/bootstrap.min.js">
-  </script>
-  <script src="js/jq.js">
-  </script>
+    <p class="copyright">Copyright &copy; chulahn.com 2026</p>
+  </footer>
   <script>
-    $(document).ready(function () {
-      console.log('ready');
-      $(".col-xs-8 img").on("error", function () { console.log("error"); $(this).attr("src", "img/mountain.jpg") })
-
-    })
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        link.classList.remove('is-riding');
+        void link.offsetWidth;
+        link.classList.add('is-riding');
+        window.setTimeout(() => link.classList.remove('is-riding'), 1100);
+      });
+    });
   </script>
 </body>
 
