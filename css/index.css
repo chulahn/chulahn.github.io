@@ -999,17 +999,47 @@ nav {
 
 @media (max-width: 640px) {
   .site-header {
-    align-items: flex-start;
-    gap: 14px;
+    align-items: center;
+    padding: 10px 10px 8px;
+    gap: 6px;
+  }
+
+  .brand {
+    width: 36px;
+    height: 34px;
+    font-size: 0.82rem;
+    box-shadow: 3px 3px 0 var(--sky);
   }
 
   nav {
-    gap: 9px;
+    flex-wrap: nowrap;
+    gap: 4px;
+    min-width: 0;
   }
 
   .nav-link {
-    font-size: 0.78rem;
-    padding: 6px 8px 8px;
+    font-size: 0.72rem;
+    padding: 4px 7px 4px;
+    min-height: 36px;
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  .nav-link span {
+    transform: translateX(2px);
+  }
+
+  .nav-skate {
+    display: block;
+    height: 12px;
+    margin-top: 1px;
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+
+  .nav-link:hover .nav-skate,
+  .nav-link.is-riding .nav-skate {
+    opacity: 1;
   }
 
   .hero {
